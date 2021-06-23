@@ -1,66 +1,58 @@
-var Producto1 = "Cuaderno Tapa Blanda";
-var Producto2 = "Cuaderno Tapa Dura";
-var Producto3 = "Cuaderno Anillado";
-var Producto4 = "Cuaderno Rayado";
-var Producto5 = "Cuaderno Cuadriculado";
-var Producto6 = "Agenda 2021";
+class Producto {
+    constructor(tipo, stock) {
+        this.tipo = tipo;
+        this.stock = parseInt(stock);
+    }
+    ProductoSeleccionado() {
+        alert("Producto seleccionado: " + this.tipo);
+        console.log("Producto seleccionado: " + this.tipo);
+    }
+}
 
-var stockProducto1 = 3;
-var stockProducto2 = 2;
-var stockProducto3 = 1;
-var stockProducto4 = 7;
-var stockProducto5 = 10;
-var stockProducto6 = 2;
+var cuadernoTB = new Producto("Cuaderno Tapa Blanda", 5);
+var cuadernoTD = new Producto("Cuaderno Tapa Dura", 2);
+var cuadernoA = new Producto("Cuaderno Anillado", 3);
+var cuadernoR = new Producto("Cuaderno Rayado", 7);
+var cuadernoC = new Producto("Cuaderno Cuadriculado", 10);
 
-console.log("Stock total:\n" + Producto1 + ": " + stockProducto1 + "\n" + Producto2 + ": " + stockProducto2 + "\n" + Producto3 + ": " + stockProducto3 + "\n" + Producto4 + ": " + stockProducto4 + "\n" + Producto5 + ": " + stockProducto5 + "\n" + Producto6 + ": " + stockProducto6);
+console.log("Stock total:\n" + cuadernoTB.tipo + ": " + cuadernoTB.stock + "\n" + cuadernoTD.tipo + ": " + cuadernoTD.stock + "\n" + cuadernoA.tipo + ": " + cuadernoA.stock + "\n" + cuadernoR.tipo + ": " + cuadernoR.stock + "\n" + cuadernoC.tipo + ": " + cuadernoC.stock);
 
 alert("Bienvenid@ al carrito de compras");
 
 do {
-    var seleccionProducto = parseInt(prompt("Ingrese el codigo del producto que desea comprar:\n1 => " + Producto1 + "\n2 => " + Producto2 + "\n3 => " + Producto3 + "\n4 => " + Producto4 + "\n5 => " + Producto5 + "\n6 => " + Producto6));
-    if (seleccionProducto <= 6 && seleccionProducto != "" && seleccionProducto > 0) {
+    var seleccionProducto = parseInt(prompt("Ingrese el codigo del producto que desea comprar:\n1 => " + cuadernoTB.tipo + "\n2 => " + cuadernoTD.tipo + "\n3 => " + cuadernoA.tipo + "\n4 => " + cuadernoR.tipo + "\n5 => " + cuadernoC.tipo));
+    if (seleccionProducto <= 5 && seleccionProducto != "" && seleccionProducto > 0) {
         switch (seleccionProducto) {
             case 1:
-                alert("Producto seleccionado: " + Producto1);
-                console.log("Producto seleccionado: " + Producto1);
-                var ProdComprado = Producto1;
-                var stockP = stockProducto1;
+                cuadernoTB.ProductoSeleccionado();
+                var ProdComprado = cuadernoTB.tipo;
+                var stockP = cuadernoTB.stock;
                 break;
             case 2:
-                alert("Producto seleccionado: " + Producto2);
-                console.log("Producto seleccionado: " + Producto2);
-                var ProdComprado = Producto2;
-                var stockP = stockProducto2;
+                cuadernoTD.ProductoSeleccionado();
+                var ProdComprado = cuadernoTD.tipo;
+                var stockP = cuadernoTD.stock;
                 break;
             case 3:
-                alert("Producto seleccionado: " + Producto3);
-                console.log("Producto seleccionado: " + Producto3);
-                var ProdComprado = Producto3;
-                var stockP = stockProducto3;
+                cuadernoA.ProductoSeleccionado();
+                var ProdComprado = cuadernoA.tipo;
+                var stockP = cuadernoA.stock;
                 break;
             case 4:
-                alert("Producto seleccionado: " + Producto4);
-                console.log("Producto seleccionado: " + Producto4);
-                var ProdComprado = Producto4;
-                var stockP = stockProducto4;
-                break;
-            case 5:
-                alert("Producto seleccionado: " + Producto5);
-                console.log("Producto seleccionado: " + Producto5);
-                var ProdComprado = Producto5;
-                var stockP = stockProducto5;
+                cuadernoR.ProductoSeleccionado();
+                var ProdComprado = cuadernoR.tipo;
+                var stockP = cuadernoR.stock;
                 break;
             default:
-                alert("Producto seleccionado: " + Producto6);
-                console.log("Producto seleccionado: " + Producto6);
-                var ProdComprado = Producto6;
-                var stockP = stockProducto6;
+                cuadernoC.ProductoSeleccionado();
+                var ProdComprado = cuadernoC.tipo;
+                var stockP = cuadernoC.stock;
                 break;
         }
     } else {
         alert("ERROR!\nIngrese un codigo valido");
     }
-} while (seleccionProducto = "" || isNaN(seleccionProducto) || seleccionProducto <= 0 || seleccionProducto > 6);
+} while (seleccionProducto = "" || isNaN(seleccionProducto) || seleccionProducto <= 0 || seleccionProducto > 5);
 
 function Stock(enStock, aComprar) {
     return enStock - aComprar;
@@ -69,7 +61,7 @@ function Stock(enStock, aComprar) {
 do {
     var cantidad = parseInt(prompt("Ingrese la cantidad a comprar:"));
     var resultado = Stock(stockP, cantidad);
-    if (cantidad != " " && stockP >= cantidad) {
+    if (cantidad != "" && stockP >= cantidad) {
         alert("Hay stock de su producto");
         console.log("Cantidad a comprar del producto " + ProdComprado + ": " + cantidad);
         alert("Muchas gracias por su compra!!");
@@ -78,20 +70,23 @@ do {
     } else {
         alert("ERROR!\nIngrese una cantidad valida");
     }
-} while (cantidad == "" || cantidad == 0 || isNaN(cantidad) || stockP < cantidad);
+} while (cantidad == "" || cantidad == 0 || stockP < cantidad);
 
 console.log("Stock actualizado de " + ProdComprado + ": " + resultado);
 
-if (ProdComprado == Producto1 && resultado < 3) {
-    console.log("Stock total actualizado:\n" + Producto1 + ": " + resultado + "\n" + Producto2 + ": " + stockProducto2 + "\n" + Producto3 + ": " + stockProducto3 + "\n" + Producto4 + ": " + stockProducto4 + "\n" + Producto5 + ": " + stockProducto5 + "\n" + Producto6 + ": " + stockProducto6);
-} else if (ProdComprado == Producto2 && resultado < 2) {
-    console.log("Stock total actualizado:\n" + Producto1 + ": " + stockProducto1 + "\n" + Producto2 + ": " + resultado + "\n" + Producto3 + ": " + stockProducto3 + "\n" + Producto4 + ": " + stockProducto4 + "\n" + Producto5 + ": " + stockProducto5 + "\n" + Producto6 + ": " + stockProducto6);
-} else if (ProdComprado == Producto3 && resultado < 1) {
-    console.log("Stock total actualizado:\n" + Producto1 + ": " + stockProducto1 + "\n" + Producto2 + ": " + stockProducto2 + "\n" + Producto3 + ": " + resultado + "\n" + Producto4 + ": " + stockProducto4 + "\n" + Producto5 + ": " + stockProducto5 + "\n" + Producto6 + ": " + stockProducto6);
-} else if (ProdComprado == Producto4 && resultado < 7) {
-    console.log("Stock total actualizado:\n" + Producto1 + ": " + stockProducto1 + "\n" + Producto2 + ": " + stockProducto2 + "\n" + Producto3 + ": " + stockProducto3 + "\n" + Producto4 + ": " + resultado + "\n" + Producto5 + ": " + stockProducto5 + "\n" + Producto6 + ": " + stockProducto6);
-} else if (ProdComprado == Producto5 && resultado < 10) {
-    console.log("Stock total actualizado:\n" + Producto1 + ": " + stockProducto1 + "\n" + Producto2 + ": " + stockProducto2 + "\n" + Producto3 + ": " + stockProducto3 + "\n" + Producto4 + ": " + stockProducto4 + "\n" + Producto5 + ": " + resultado + "\n" + Producto6 + ": " + stockProducto6);
+
+if (ProdComprado == cuadernoTB["tipo"] && resultado < 5) {
+    console.log("Stock total actualizado:\n" + cuadernoTB.tipo + ": " + resultado + "\n" + cuadernoTD.tipo + ": " + cuadernoTD.stock + "\n" + cuadernoA.tipo + ": " + cuadernoA.stock + "\n" + cuadernoR.tipo + ": " + cuadernoR.stock + "\n" + cuadernoC.tipo + ": " + cuadernoC.stock);
+
+} else if (ProdComprado == cuadernoTD["tipo"] && resultado < 2) {
+    console.log("Stock total actualizado:\n" + cuadernoTB.tipo + ": " + cuadernoTB.stock + "\n" + cuadernoTD.tipo + ": " + resultado + "\n" + cuadernoA.tipo + ": " + cuadernoA.stock + "\n" + cuadernoR.tipo + ": " + cuadernoR.stock + "\n" + cuadernoC.tipo + ": " + cuadernoC.stock);
+
+} else if (ProdComprado == cuadernoA["tipo"] && resultado < 3) {
+    console.log("Stock total actualizado:\n" + cuadernoTB.tipo + ": " + cuadernoTB.stock + "\n" + cuadernoTD.tipo + ": " + cuadernoTD.stock + "\n" + cuadernoA.tipo + ": " + resultado + "\n" + cuadernoR.tipo + ": " + cuadernoR.stock + "\n" + cuadernoC.tipo + ": " + cuadernoC.stock);
+
+} else if (ProdComprado == cuadernoR["tipo"] && resultado < 7) {
+    console.log("Stock total actualizado:\n" + cuadernoTB.tipo + ": " + cuadernoTB.stock + "\n" + cuadernoTD.tipo + ": " + cuadernoTD.stock + "\n" + cuadernoA.tipo + ": " + cuadernoA.stock + "\n" + cuadernoR.tipo + ": " + resultado + "\n" + cuadernoC.tipo + ": " + cuadernoC.stock);
+
 } else {
-    console.log("Stock total actualizado:\n" + Producto1 + ": " + stockProducto1 + "\n" + Producto2 + ": " + stockProducto2 + "\n" + Producto3 + ": " + stockProducto3 + "\n" + Producto4 + ": " + stockProducto4 + "\n" + Producto5 + ": " + stockProducto5 + "\n" + Producto6 + ": " + resultado);
+    console.log("Stock total actualizado:\n" + cuadernoTB.tipo + ": " + cuadernoTB.stock + "\n" + cuadernoTD.tipo + ": " + cuadernoTD.stock + "\n" + cuadernoA.tipo + ": " + cuadernoA.stock + "\n" + cuadernoR.tipo + ": " + cuadernoR.stock + "\n" + cuadernoC.tipo + ": " + resultado);
 }
