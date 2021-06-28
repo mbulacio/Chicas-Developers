@@ -1,92 +1,84 @@
-class Producto {
-    constructor(tipo, stock) {
-        this.tipo = tipo;
-        this.stock = parseInt(stock);
-    }
-    ProductoSeleccionado() {
-        alert("Producto seleccionado: " + this.tipo);
-        console.log("Producto seleccionado: " + this.tipo);
-    }
-}
+const productos = [{ id: "CTB", tipo: "Cuaderno Tapa Blanda", precio: 600, stock: 15 },
+    { id: "CTD", tipo: "Cuaderno Tapa Dura", precio: 700, stock: 24 },
+    { id: "CA", tipo: "Cuaderno Anillado", precio: 800, stock: 10 },
+    { id: "CCR", tipo: "Cuaderno Con Relieve", precio: 900, stock: 7 },
+    { id: "CPS", tipo: "Cuaderno Para Sketch", precio: 500, stock: 12 }
+]
 
-var cuadernoTB = new Producto("Cuaderno Tapa Blanda", 5);
-var cuadernoTD = new Producto("Cuaderno Tapa Dura", 2);
-var cuadernoA = new Producto("Cuaderno Anillado", 3);
-var cuadernoR = new Producto("Cuaderno Rayado", 7);
-var cuadernoC = new Producto("Cuaderno Cuadriculado", 10);
+const arrayOrdenado = productos.sort((a, b) => a.precio - b.precio);
+console.log(arrayOrdenado);
 
-console.log("Stock total:\n" + cuadernoTB.tipo + ": " + cuadernoTB.stock + "\n" + cuadernoTD.tipo + ": " + cuadernoTD.stock + "\n" + cuadernoA.tipo + ": " + cuadernoA.stock + "\n" + cuadernoR.tipo + ": " + cuadernoR.stock + "\n" + cuadernoC.tipo + ": " + cuadernoC.stock);
+console.log("Stock total:\n" + productos[0].tipo + ": " + productos[0].stock +
+    "\n" + productos[1].tipo + ": " + productos[1].stock +
+    "\n" + productos[2].tipo + ": " + productos[2].stock +
+    "\n" + productos[3].tipo + ": " + productos[3].stock +
+    "\n" + productos[4].tipo + ": " + productos[4].stock);
 
 alert("Bienvenid@ al carrito de compras");
 
 do {
-    var seleccionProducto = parseInt(prompt("Ingrese el codigo del producto que desea comprar:\n1 => " + cuadernoTB.tipo + "\n2 => " + cuadernoTD.tipo + "\n3 => " + cuadernoA.tipo + "\n4 => " + cuadernoR.tipo + "\n5 => " + cuadernoC.tipo));
-    if (seleccionProducto <= 5 && seleccionProducto != "" && seleccionProducto > 0) {
+    var seleccionProducto = parseInt(prompt("Ingrese el codigo del producto que desea comprar:\n1 => " + productos[0].tipo + "\n2 => " + productos[1].tipo + "\n3 => " + productos[2].tipo + "\n4 => " + productos[3].tipo + "\n5 => " + productos[4].tipo));
+    if (seleccionProducto <= 4 && seleccionProducto != "" && seleccionProducto >= 0) {
         switch (seleccionProducto) {
             case 1:
-                cuadernoTB.ProductoSeleccionado();
-                var ProdComprado = cuadernoTB.tipo;
-                var stockP = cuadernoTB.stock;
+                alert("Producto seleccionado: " + productos[0].tipo);
+                console.log("Producto seleccionado: " + productos[0].tipo);
+                var prodComprado = productos[0].tipo;
+                var stockP = productos[0].stock;
                 break;
             case 2:
-                cuadernoTD.ProductoSeleccionado();
-                var ProdComprado = cuadernoTD.tipo;
-                var stockP = cuadernoTD.stock;
+                alert("Producto seleccionado: " + productos[1].tipo);
+                console.log("Producto seleccionado: " + productos[1].tipo);
+                var prodComprado = productos[1].tipo;
+                var stockP = productos[1].stock;
                 break;
             case 3:
-                cuadernoA.ProductoSeleccionado();
-                var ProdComprado = cuadernoA.tipo;
-                var stockP = cuadernoA.stock;
+                alert("Producto seleccionado: " + productos[2].tipo);
+                console.log("Producto seleccionado: " + productos[2].tipo);
+                var prodComprado = productos[2].tipo;
+                var stockP = productos[2].stock;
                 break;
             case 4:
-                cuadernoR.ProductoSeleccionado();
-                var ProdComprado = cuadernoR.tipo;
-                var stockP = cuadernoR.stock;
+                alert("Producto seleccionado: " + productos[3].tipo);
+                console.log("Producto seleccionado: " + productos[3].tipo);
+                var prodComprado = productos[3].tipo;
+                var stockP = productos[3].stock;
                 break;
             default:
-                cuadernoC.ProductoSeleccionado();
-                var ProdComprado = cuadernoC.tipo;
-                var stockP = cuadernoC.stock;
+                alert("Producto seleccionado: " + productos[4].tipo);
+                console.log("Producto seleccionado: " + productos[4].tipo);
+                var prodComprado = productos[4].tipo;
+                var stockP = productos[4].stock;
                 break;
         }
     } else {
         alert("ERROR!\nIngrese un codigo valido");
     }
-} while (seleccionProducto = "" || isNaN(seleccionProducto) || seleccionProducto <= 0 || seleccionProducto > 5);
+} while (seleccionProducto = "" || isNaN(seleccionProducto) || seleccionProducto <= 0 || seleccionProducto > 4);
+
 
 function Stock(enStock, aComprar) {
     return enStock - aComprar;
 }
+
 
 do {
     var cantidad = parseInt(prompt("Ingrese la cantidad a comprar:"));
     var resultado = Stock(stockP, cantidad);
     if (cantidad != "" && stockP >= cantidad) {
         alert("Hay stock de su producto");
-        console.log("Cantidad a comprar del producto " + ProdComprado + ": " + cantidad);
+        console.log("Cantidad a comprar del producto " + prodComprado + ": " + cantidad);
         alert("Muchas gracias por su compra!!");
     } else if (cantidad != "" && stockP < cantidad) {
-        alert("No hay stock suficiente del producto\nStock de " + ProdComprado + ": " + stockP);
+        alert("No hay stock suficiente del producto\nStock de " + prodComprado + ": " + stockP);
     } else {
         alert("ERROR!\nIngrese una cantidad valida");
     }
 } while (cantidad == "" || cantidad == 0 || stockP < cantidad);
 
-console.log("Stock actualizado de " + ProdComprado + ": " + resultado);
 
-
-if (ProdComprado == cuadernoTB["tipo"] && resultado < 5) {
-    console.log("Stock total actualizado:\n" + cuadernoTB.tipo + ": " + resultado + "\n" + cuadernoTD.tipo + ": " + cuadernoTD.stock + "\n" + cuadernoA.tipo + ": " + cuadernoA.stock + "\n" + cuadernoR.tipo + ": " + cuadernoR.stock + "\n" + cuadernoC.tipo + ": " + cuadernoC.stock);
-
-} else if (ProdComprado == cuadernoTD["tipo"] && resultado < 2) {
-    console.log("Stock total actualizado:\n" + cuadernoTB.tipo + ": " + cuadernoTB.stock + "\n" + cuadernoTD.tipo + ": " + resultado + "\n" + cuadernoA.tipo + ": " + cuadernoA.stock + "\n" + cuadernoR.tipo + ": " + cuadernoR.stock + "\n" + cuadernoC.tipo + ": " + cuadernoC.stock);
-
-} else if (ProdComprado == cuadernoA["tipo"] && resultado < 3) {
-    console.log("Stock total actualizado:\n" + cuadernoTB.tipo + ": " + cuadernoTB.stock + "\n" + cuadernoTD.tipo + ": " + cuadernoTD.stock + "\n" + cuadernoA.tipo + ": " + resultado + "\n" + cuadernoR.tipo + ": " + cuadernoR.stock + "\n" + cuadernoC.tipo + ": " + cuadernoC.stock);
-
-} else if (ProdComprado == cuadernoR["tipo"] && resultado < 7) {
-    console.log("Stock total actualizado:\n" + cuadernoTB.tipo + ": " + cuadernoTB.stock + "\n" + cuadernoTD.tipo + ": " + cuadernoTD.stock + "\n" + cuadernoA.tipo + ": " + cuadernoA.stock + "\n" + cuadernoR.tipo + ": " + resultado + "\n" + cuadernoC.tipo + ": " + cuadernoC.stock);
-
+if (resultado <= 0) {
+    console.log(prodComprado + ": Total Vendido");
 } else {
-    console.log("Stock total actualizado:\n" + cuadernoTB.tipo + ": " + cuadernoTB.stock + "\n" + cuadernoTD.tipo + ": " + cuadernoTD.stock + "\n" + cuadernoA.tipo + ": " + cuadernoA.stock + "\n" + cuadernoR.tipo + ": " + cuadernoR.stock + "\n" + cuadernoC.tipo + ": " + resultado);
+    console.log("Stock actualizado de " + prodComprado + ": " + resultado);
 }
