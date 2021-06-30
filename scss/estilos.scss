@@ -1,0 +1,123 @@
+@import './variables';
+@import './mixins';
+body {
+    background-color: $blanco;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    a {
+        text-decoration: none;
+        color: $negro;
+    }
+}
+
+header {
+    div {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+}
+
+div.header-fondo {
+    background-color: white;
+}
+
+h2.suscripcion {
+    font-weight: bold;
+    text-shadow: 0px 0px ($diezpx)-5 black;
+}
+
+h3.suscripcion {
+    font-weight: bold;
+    text-shadow: 0px 0px ($diezpx)-5 black;
+}
+
+footer {
+    div {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+}
+
+header {
+    div {
+        padding: ($diezpx)-5 0px ($diezpx)-7 0px;
+        grid-column-gap: $diezpor;
+    }
+}
+
+.div__logo {
+    @include imagenes ($cienpx * 2, $diezpx * 5);
+}
+
+.div__titulos {
+    a {
+        font-size: $diezpx*3;
+        font-weight: bold;
+    }
+}
+
+.div__img {
+    @include imagenes ($diezpx + 25, $diezpx + 25);
+}
+
+body {
+    h1 {
+        padding: $diezpx *2 0px 0px 0px;
+    }
+}
+
+img.small {
+    @include imagenes ($cienpx * 4 + 50, $cienpx * 4 + 50);
+}
+
+body {
+    article {
+        p {
+            font-size: $diezpx + 20;
+            padding: 70px $diezpx *2 0px $diezpx *3;
+        }
+    }
+}
+
+section {
+    div.card {
+        margin: $cienpx/2 $cienpx $diezpx *2 $cienpx;
+        div {
+            padding: 0px;
+        }
+    }
+}
+
+div.espacio {
+    margin: ($diezpor)-8 $diezpor * 2 ($diezpor)-5 $diezpor * 2;
+}
+
+input {
+    margin: 0px $diezpx*2 0px 0px;
+    height: $diezpx * 6;
+}
+
+div.espacioSuscripcion {
+    padding: $diezpor *2 $diezpor $diezpor $diezpor;
+}
+
+footer {
+    div {
+        padding: ($diezpx)- 4 0px 0px 0px;
+        grid-column-gap: $diezpor;
+    }
+}
+
+img.div-centrar {
+    margin: 0px 0px 0px ($cienpx)-10;
+}
+
+div.card-espacio {
+    margin: 0% $diezpor 0% $diezpor;
+}
