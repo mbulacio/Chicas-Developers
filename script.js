@@ -25,36 +25,46 @@ do {
                 console.log("Producto seleccionado: " + productos[0].tipo);
                 var prodComprado = productos[0].tipo;
                 var stockP = productos[0].stock;
+                var precioProd = productos[0].precio;
+                var idProd = productos[0].id;
                 break;
             case 2:
                 alert("Producto seleccionado: " + productos[1].tipo);
                 console.log("Producto seleccionado: " + productos[1].tipo);
                 var prodComprado = productos[1].tipo;
                 var stockP = productos[1].stock;
+                var precioProd = productos[1].precio;
+                var idProd = productos[1].id;
                 break;
             case 3:
                 alert("Producto seleccionado: " + productos[2].tipo);
                 console.log("Producto seleccionado: " + productos[2].tipo);
                 var prodComprado = productos[2].tipo;
                 var stockP = productos[2].stock;
+                var precioProd = productos[2].precio;
+                var idProd = productos[2].id;
                 break;
             case 4:
                 alert("Producto seleccionado: " + productos[3].tipo);
                 console.log("Producto seleccionado: " + productos[3].tipo);
                 var prodComprado = productos[3].tipo;
                 var stockP = productos[3].stock;
+                var precioProd = productos[3].precio;
+                var idProd = productos[3].id;
                 break;
             default:
                 alert("Producto seleccionado: " + productos[4].tipo);
                 console.log("Producto seleccionado: " + productos[4].tipo);
                 var prodComprado = productos[4].tipo;
                 var stockP = productos[4].stock;
+                var precioProd = productos[4].precio;
+                var idProd = productos[4].id;
                 break;
         }
     } else {
         alert("ERROR!\nIngrese un codigo valido");
     }
-} while (seleccionProducto = "" || isNaN(seleccionProducto) || seleccionProducto <= 1 || seleccionProducto > 5);
+} while (seleccionProducto = "" || isNaN(seleccionProducto) || seleccionProducto <= 0 || seleccionProducto > 5);
 
 
 function Stock(enStock, aComprar) {
@@ -82,3 +92,37 @@ if (resultado <= 0) {
 } else {
     console.log("Stock actualizado de " + prodComprado + ": " + resultado);
 }
+
+//Precio final
+
+function Total(precios, cant) {
+    return precios * cant;
+}
+
+var totalProducto = Total(precioProd, cantidad);
+
+
+let carrito = document.createElement("tr");
+
+carrito.innerHTML = `<th scope="row">${ idProd }</th>
+<td>${ prodComprado }</td>
+<td>${ cantidad }</td>
+<td>${ precioProd }</td>`;
+
+document.getElementById("carrito-producto").appendChild(carrito);
+
+let carritoTotal = document.createElement("tr");
+
+carritoTotal.innerHTML = `<th scope="row"></th>
+<td></td>
+<th>Total</th>
+<td>${ totalProducto }</td>`;
+
+document.getElementById("carrito-producto").appendChild(carritoTotal);
+
+/* <tr>
+<th scope="row" id="carrito-id"></th>
+<td id="carrito-producto"></td>
+<td id="carrito-cantidad"></td>
+<td id="carrito-precio"></td>
+</tr> */
