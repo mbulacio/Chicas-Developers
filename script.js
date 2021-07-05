@@ -18,7 +18,7 @@ alert("Bienvenid@ al carrito de compras");
 
 do {
     var seleccionProducto = parseInt(prompt("Ingrese el codigo del producto que desea comprar:\n1 => " + productos[0].tipo + "\n2 => " + productos[1].tipo + "\n3 => " + productos[2].tipo + "\n4 => " + productos[3].tipo + "\n5 => " + productos[4].tipo));
-    if (seleccionProducto <= 4 && seleccionProducto != "" && seleccionProducto >= 0) {
+    if (seleccionProducto <= 5 && seleccionProducto != "" && seleccionProducto >= 1) {
         switch (seleccionProducto) {
             case 1:
                 alert("Producto seleccionado: " + productos[0].tipo);
@@ -54,7 +54,7 @@ do {
     } else {
         alert("ERROR!\nIngrese un codigo valido");
     }
-} while (seleccionProducto = "" || isNaN(seleccionProducto) || seleccionProducto <= 0 || seleccionProducto > 4);
+} while (seleccionProducto = "" || isNaN(seleccionProducto) || seleccionProducto <= 1 || seleccionProducto > 5);
 
 
 function Stock(enStock, aComprar) {
@@ -74,7 +74,7 @@ do {
     } else {
         alert("ERROR!\nIngrese una cantidad valida");
     }
-} while (cantidad == "" || cantidad == 0 || stockP < cantidad);
+} while (cantidad == "" || cantidad == 0 || stockP < cantidad || isNaN(cantidad));
 
 
 if (resultado <= 0) {
