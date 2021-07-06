@@ -9,8 +9,7 @@
     font-size: 90%; }
   .div__img {
     width: 17px;
-    height: 17px;
-    padding: 0px; }
+    height: 17px; }
   body h1 {
     font-size: 130%;
     padding: 10px 0px 5px 0px; }
@@ -19,8 +18,9 @@
   img.small {
     width: 150px;
     height: 160px; }
+  p {
+    font-size: 80%; }
   body article p {
-    font-size: 80%;
     padding: 20px 5px 0px 10px; }
   section div.card {
     margin: 17px 10px 20px 10px;
@@ -46,10 +46,78 @@
   div.card-espacio {
     margin: 0%; }
   footer div {
-    padding: 3px 0px 0px 0px;
+    padding: 3px 0px 4px 0px;
     grid-column-gap: 3%; }
   img.div-centrar {
     margin: 0px; } }
+
+@media (min-width: 767px) {
+  header div {
+    padding: 2px 0px 3px 0px;
+    grid-column-gap: 13%; }
+  header div.unico {
+    grid-column-gap: 3%; }
+  .div__logo {
+    width: 130px;
+    height: 35px;
+    margin: 10px 0px 0px 0px; }
+  div.div__titulos a {
+    font-size: 160%;
+    margin: 3px 0px 0px 0px;
+    font-weight: bold; }
+  .div__img {
+    width: 30px;
+    height: 32px;
+    margin: 10px 0px 10px 0px; }
+  body h1 {
+    font-size: 220%;
+    padding: 30px 0px 10px 0px; }
+  div.espacio {
+    margin: 2% 50px 5% 50px; }
+  img.small {
+    width: 240px;
+    height: 250px; }
+  p {
+    font-size: 150%; }
+  body article p {
+    padding: 30px 15px 0px 15px; }
+  section div.card {
+    margin: 40px 50px 30px 50px;
+    border: white; }
+    section div.card div {
+      padding: 0px; }
+  div input {
+    margin: 0px 70px 0px 0px;
+    height: 60px; }
+  div button.btn {
+    height: 60px;
+    padding: 10px; }
+  div.espacioSuscripcion {
+    padding: 15% 5% 5% 5%; }
+  h2.suscripcion {
+    font-size: 200%;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px black; }
+  h3.suscripcion {
+    font-size: 180%;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px black; }
+  div.card-espacio {
+    margin: 0%; }
+  footer div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: stretch; }
+  footer div {
+    padding: 5px 0px 5px 0px;
+    grid-column-gap: 3%; }
+  img.div-centrar {
+    margin: 0px; }
+  h1.espacios {
+    margin: 20px 0px 0px 0px; }
+  p.espacios {
+    padding: 20px 90px 60px 90px; } }
 
 body {
   background-color: white;
@@ -67,9 +135,3 @@ header div {
 
 div.header-fondo {
   background-color: white; }
-
-footer div {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
-  align-items: stretch; }

@@ -1,6 +1,7 @@
 @import './variables';
 @import './mixins';
 @import './phone';
+@import './tablet';
 body {
     background-color: $blanco;
     font-family: 'Kanit', sans-serif;
@@ -34,15 +35,6 @@ div.header-fondo {
 //     font-weight: bold;
 //     text-shadow: 0px 0px ($diezpx)-5 black;
 // }
-footer {
-    div {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
-        align-items: stretch;
-    }
-}
-
 // header {
 //     div {
 //         padding: ($diezpx)-5 0px ($diezpx)-7 0px;

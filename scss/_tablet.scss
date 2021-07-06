@@ -1,0 +1,111 @@
+@media (min-width: 767px) {
+    //Inicio
+    header {
+        div {
+            padding: 2px 0px 3px 0px;
+            grid-column-gap: 13%;
+        }
+    }
+    header {
+        div.unico {
+            grid-column-gap: 3%;
+        }
+    }
+    .div__logo {
+        @include imagenes ($cienpx + 30, $diezpx + 25);
+        margin: 10px 0px 0px 0px;
+    }
+    div.div__titulos {
+        a {
+            font-size: 160%;
+            margin: 3px 0px 0px 0px;
+            font-weight: bold;
+        }
+    }
+    .div__img {
+        @include imagenes ($diezpx+20, $diezpx+22);
+        margin: 10px 0px 10px 0px;
+    }
+    body {
+        h1 {
+            font-size: 220%;
+            padding: $diezpx +20 0px 10px 0px;
+        }
+    }
+    div.espacio {
+        margin: ($diezpor)-8 50px ($diezpor)-5 50px;
+    }
+    img.small {
+        @include imagenes ($cienpx+140, $cienpx+150);
+    }
+    p {
+        font-size: 150%;
+    }
+    body {
+        article {
+            p {
+                padding: 30px 15px 0px 15px;
+            }
+        }
+    }
+    section {
+        div.card {
+            margin: 40px 50px 30px 50px;
+            border: white;
+            div {
+                padding: 0px;
+            }
+        }
+    }
+    div {
+        input {
+            margin: 0px 70px 0px 0px;
+            height: 60px;
+        }
+    }
+    div {
+        button.btn {
+            height: 60px;
+            padding: 10px;
+        }
+    }
+    div.espacioSuscripcion {
+        padding: 15% 5% 5% 5%;
+    }
+    h2.suscripcion {
+        font-size: 200%;
+        font-weight: bold;
+        text-shadow: 0px 0px ($diezpx)-5 black;
+    }
+    h3.suscripcion {
+        font-size: 180%;
+        font-weight: bold;
+        text-shadow: 0px 0px ($diezpx)-5 black;
+    }
+    div.card-espacio {
+        margin: 0%;
+    }
+    footer {
+        div {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            align-items: stretch;
+        }
+    }
+    footer {
+        div {
+            padding: 5px 0px 5px 0px;
+            grid-column-gap: 3%;
+        }
+    }
+    img.div-centrar {
+        margin: 0px;
+    }
+    h1.espacios {
+        margin: 20px 0px 0px 0px;
+    }
+    p.espacios {
+        padding: 20px 90px 60px 90px;
+    }
+}
