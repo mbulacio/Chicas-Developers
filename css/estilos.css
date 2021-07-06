@@ -1,105 +1,75 @@
+@media (max-width: 575.98px) {
+  header div {
+    padding: 3px 0px 2px 0px;
+    grid-column-gap: 7%; }
+  .div__logo {
+    width: 75px;
+    height: 20px; }
+  .div__titulos a {
+    font-size: 90%; }
+  .div__img {
+    width: 17px;
+    height: 17px;
+    padding: 0px; }
+  body h1 {
+    font-size: 130%;
+    padding: 10px 0px 5px 0px; }
+  div.espacio {
+    margin: 2% 10px 5% 10px; }
+  img.small {
+    width: 150px;
+    height: 160px; }
+  body article p {
+    font-size: 80%;
+    padding: 20px 5px 0px 10px; }
+  section div.card {
+    margin: 17px 10px 20px 10px;
+    border: white; }
+    section div.card div {
+      padding: 0px; }
+  div input {
+    margin: 0px 10px 0px 0px;
+    height: 34px; }
+  div button.btn {
+    height: 34px;
+    padding: 5px; }
+  div.espacioSuscripcion {
+    padding: 7% 10% 5% 10%; }
+  h2.suscripcion {
+    font-size: 115%;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px black; }
+  h3.suscripcion {
+    font-size: 100%;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px black; }
+  div.card-espacio {
+    margin: 0%; }
+  footer div {
+    padding: 3px 0px 0px 0px;
+    grid-column-gap: 3%; }
+  img.div-centrar {
+    margin: 0px; } }
+
 body {
-    background-color: white;
-    font-family: 'Kanit', sans-serif;
-}
+  background-color: white;
+  font-family: 'Kanit', sans-serif; }
 
 body a {
-    text-decoration: none;
-    color: black;
-}
+  text-decoration: none;
+  color: black; }
 
 header div {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-items: stretch;
-}
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: stretch; }
 
 div.header-fondo {
-    background-color: white;
-}
-
-h2.suscripcion {
-    font-weight: bold;
-    text-shadow: 0px 0px 5px black;
-}
-
-h3.suscripcion {
-    font-weight: bold;
-    text-shadow: 0px 0px 5px black;
-}
+  background-color: white; }
 
 footer div {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-items: stretch;
-}
-
-header div {
-    padding: 5px 0px 3px 0px;
-    grid-column-gap: 10%;
-}
-
-.div__logo {
-    width: 200px;
-    height: 50px;
-}
-
-.div__titulos a {
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.div__img {
-    width: 35px;
-    height: 35px;
-}
-
-body h1 {
-    padding: 20px 0px 0px 0px;
-}
-
-img.small {
-    width: 450px;
-    height: 450px;
-}
-
-body article p {
-    font-size: 30px;
-    padding: 70px 20px 0px 30px;
-}
-
-section div.card {
-    margin: 50px 100px 20px 100px;
-}
-
-section div.card div {
-    padding: 0px;
-}
-
-div.espacio {
-    margin: 2% 20% 5% 20%;
-}
-
-input {
-    margin: 0px 20px 0px 0px;
-    height: 60px;
-}
-
-div.espacioSuscripcion {
-    padding: 20% 10% 10% 10%;
-}
-
-footer div {
-    padding: 6px 0px 0px 0px;
-    grid-column-gap: 10%;
-}
-
-img.div-centrar {
-    margin: 0px 0px 0px 90px;
-}
-
-div.card-espacio {
-    margin: 0% 10% 0% 10%;
-}
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: stretch; }

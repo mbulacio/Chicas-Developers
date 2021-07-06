@@ -1,0 +1,87 @@
+@media (max-width: 575.98px) {
+    //Inicio
+    header {
+        div {
+            padding: 3px 0px 2px 0px;
+            grid-column-gap: 7%;
+        }
+    }
+    .div__logo {
+        @include imagenes (($cienpx)-25, $diezpx + 10);
+    }
+    .div__titulos {
+        a {
+            font-size: 90%;
+        }
+    }
+    .div__img {
+        @include imagenes ($diezpx+7, $diezpx+7);
+        padding: 0px;
+    }
+    body {
+        h1 {
+            font-size: 130%;
+            padding: $diezpx 0px 5px 0px;
+        }
+    }
+    div.espacio {
+        margin: ($diezpor)-8 10px ($diezpor)-5 10px;
+    }
+    img.small {
+        @include imagenes ($cienpx+50, $cienpx+60);
+    }
+    body {
+        article {
+            p {
+                font-size: 80%;
+                padding: 20px 5px 0px 10px;
+            }
+        }
+    }
+    section {
+        div.card {
+            margin: 17px 10px 20px 10px;
+            border: white;
+            div {
+                padding: 0px;
+            }
+        }
+    }
+    div {
+        input {
+            margin: 0px 10px 0px 0px;
+            height: 34px;
+        }
+    }
+    div {
+        button.btn {
+            height: 34px;
+            padding: 5px;
+        }
+    }
+    div.espacioSuscripcion {
+        padding: 7% 10% 5% 10%;
+    }
+    h2.suscripcion {
+        font-size: 115%;
+        font-weight: bold;
+        text-shadow: 0px 0px ($diezpx)-5 black;
+    }
+    h3.suscripcion {
+        font-size: 100%;
+        font-weight: bold;
+        text-shadow: 0px 0px ($diezpx)-5 black;
+    }
+    div.card-espacio {
+        margin: 0%;
+    }
+    footer {
+        div {
+            padding: 3px 0px 0px 0px;
+            grid-column-gap: 3%;
+        }
+    }
+    img.div-centrar {
+        margin: 0px;
+    }
+}

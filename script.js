@@ -119,10 +119,3 @@ carritoTotal.innerHTML = `<th scope="row"></th>
 <td>${ totalProducto }</td>`;
 
 document.getElementById("carrito-producto").appendChild(carritoTotal);
-
-/* <tr>
-<th scope="row" id="carrito-id"></th>
-<td id="carrito-producto"></td>
-<td id="carrito-cantidad"></td>
-<td id="carrito-precio"></td>
-</tr> */
