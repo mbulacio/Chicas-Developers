@@ -16,13 +16,22 @@ header {
     div {
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: stretch;
     }
 }
 
 div.header-fondo {
     background-color: white;
+}
+
+footer {
+    div {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
 }
 
 @import './phone';

@@ -1,57 +1,51 @@
 @media (min-width: 767px) {
-    //Inicio
-    header {
-        div {
-            padding: 2px 0px 3px 0px;
-            grid-column-gap: 13%;
-        }
-    }
     header {
         div.unico {
-            grid-column-gap: 3%;
+            padding: ($diezpx)-8 0px ($diezpx)-7 0px;
+            grid-column-gap: ($diezpor)-7;
         }
     }
     .div__logo {
-        @include imagenes ($cienpx + 30, $diezpx + 25);
-        margin: 10px 0px 0px 0px;
+        @include imagenes ($cienpx + 30, $diezpx *3 + 5);
+        margin: $diezpx 0px 0px 0px;
     }
     div.div__titulos {
         a {
             font-size: 160%;
-            margin: 3px 0px 0px 0px;
+            margin: ($diezpx)-5 0px 0px 0px;
             font-weight: bold;
         }
     }
     .div__img {
         @include imagenes ($diezpx+20, $diezpx+22);
-        margin: 10px 0px 10px 0px;
+        margin: $diezpx 0px $diezpx 0px;
     }
     body {
         h1 {
-            font-size: 220%;
-            padding: $diezpx +20 0px 10px 0px;
+            font-size: $cienpor *2 + 20;
+            padding: $diezpx *3 0px $diezpx 0px;
         }
     }
     div.espacio {
-        margin: ($diezpor)-8 50px ($diezpor)-5 50px;
+        margin: ($diezpor)-8 $cienpx/2 ($diezpor)-5 $cienpx/2;
     }
     img.small {
-        @include imagenes ($cienpx+140, $cienpx+150);
+        @include imagenes ($cienpx*2 + 40, $cienpx*2 + 50);
     }
     p {
-        font-size: 150%;
+        font-size: $cienpor + 50;
     }
     body {
         article {
             p {
-                padding: 30px 15px 0px 15px;
+                padding: $diezpx*3 $diezpx + 5 0px $diezpx + 5;
             }
         }
     }
     section {
         div.card {
-            margin: 40px 50px 30px 50px;
-            border: white;
+            margin: $diezpx*4 $diezpx*5 $diezpx*3 $diezpx*5;
+            border: $blanco;
             div {
                 padding: 0px;
             }
@@ -59,57 +53,49 @@
     }
     div {
         input {
-            margin: 0px 70px 0px 0px;
-            height: 60px;
+            margin: 0px ($cienpx)- 30 0px 0px;
+            height: ($cienpx)- 40;
         }
     }
     div {
         button.btn {
-            height: 60px;
-            padding: 10px;
+            height: ($cienpx)- 40;
+            padding: $diezpx;
         }
     }
     div.espacioSuscripcion {
-        padding: 15% 5% 5% 5%;
+        padding: $diezpor + 5 ($diezpor)-5 ($diezpor)-5 ($diezpor)-5;
     }
     h2.suscripcion {
-        font-size: 200%;
-        font-weight: bold;
-        text-shadow: 0px 0px ($diezpx)-5 black;
+        font-size: $cienpor *2;
+        font-weight: $negrita;
+        text-shadow: 0px 0px ($diezpx)-5 $negro;
     }
     h3.suscripcion {
-        font-size: 180%;
+        font-size: $cienpor + 80;
         font-weight: bold;
-        text-shadow: 0px 0px ($diezpx)-5 black;
+        text-shadow: 0px 0px ($diezpx)-5 $negro;
     }
     div.card-espacio {
         margin: 0%;
     }
     footer {
         div {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-evenly;
-            align-items: stretch;
-        }
-    }
-    footer {
-        div {
-            padding: 5px 0px 5px 0px;
-            grid-column-gap: 3%;
+            padding: ($diezpx)-5 0px ($diezpx)-5 0px;
+            grid-column-gap: ($diezpor)- 7;
         }
     }
     img.div-centrar {
         margin: 0px;
     }
     h1.espacios {
-        margin: 20px 0px 0px 0px;
+        margin: $diezpx *2 0px 0px 0px;
     }
     p.espacios {
-        padding: 20px 90px 60px 90px;
+        padding: $diezpx *2 ($cienpx)-10 ($cienpx)-40 ($cienpx)-10;
     }
     div.espaciado {
-        margin: 40px 100px 40px 100px;
-        height: 200px;
+        margin: $diezpx *4 $cienpx $diezpx *4 $cienpx;
+        height: $cienpx * 2;
     }
 }

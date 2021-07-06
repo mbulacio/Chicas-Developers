@@ -9,16 +9,19 @@ body a {
 header div {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: stretch; }
 
 div.header-fondo {
   background-color: white; }
 
+footer div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: stretch; }
+
 @media (max-width: 575.98px) {
-  header div {
-    padding: 3px 0px 2px 0px;
-    grid-column-gap: 7%; }
   header div.unico {
     padding: 3px 0px 2px 0px;
     grid-column-gap: 2%; }
@@ -26,7 +29,9 @@ div.header-fondo {
     width: 75px;
     height: 20px; }
   .div__titulos a {
-    font-size: 90%; }
+    font-size: 90%;
+    font-weight: bold;
+    margin: 3px; }
   .div__img {
     width: 17px;
     height: 17px; }
@@ -68,11 +73,6 @@ div.header-fondo {
   footer div {
     padding: 3px 0px 4px 0px;
     grid-column-gap: 3%; }
-  footer div {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-items: stretch; }
   img.div-centrar {
     margin: 0px; }
   div.espaciado {
@@ -80,10 +80,8 @@ div.header-fondo {
     height: 200px; } }
 
 @media (min-width: 767px) {
-  header div {
-    padding: 2px 0px 3px 0px;
-    grid-column-gap: 13%; }
   header div.unico {
+    padding: 2px 0px 3px 0px;
     grid-column-gap: 3%; }
   .div__logo {
     width: 130px;
@@ -91,7 +89,7 @@ div.header-fondo {
     margin: 10px 0px 0px 0px; }
   div.div__titulos a {
     font-size: 160%;
-    margin: 3px 0px 0px 0px;
+    margin: 5px 0px 0px 0px;
     font-weight: bold; }
   .div__img {
     width: 30px;
@@ -133,11 +131,6 @@ div.header-fondo {
   div.card-espacio {
     margin: 0%; }
   footer div {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-items: stretch; }
-  footer div {
     padding: 5px 0px 5px 0px;
     grid-column-gap: 3%; }
   img.div-centrar {
@@ -151,24 +144,21 @@ div.header-fondo {
     height: 200px; } }
 
 @media (min-width: 992px) {
-  h2.suscripcion {
-    font-weight: bold;
-    text-shadow: 0px 0px 5px black; }
-  h3.suscripcion {
-    font-weight: bold;
-    text-shadow: 0px 0px 5px black; }
-  header div {
-    padding: 5px 0px 3px 0px;
-    grid-column-gap: 10%; }
+  header div.unico {
+    padding: 10px 0px 5px 0px;
+    grid-column-gap: 7%; }
   .div__logo {
-    width: 200px;
-    height: 50px; }
+    width: 210px;
+    height: 50px;
+    margin: 0px 0px 02px 0px; }
   .div__titulos a {
     font-size: 30px;
-    font-weight: bold; }
+    font-weight: bold;
+    margin: 10px 0px 0px 0px; }
   .div__img {
     width: 35px;
-    height: 35px; }
+    height: 35px;
+    margin: 10px 0px 0px 0px; }
   body h1 {
     padding: 20px 0px 0px 0px; }
   img.small {
@@ -178,7 +168,8 @@ div.header-fondo {
     font-size: 30px;
     padding: 70px 20px 0px 30px; }
   section div.card {
-    margin: 50px 100px 20px 100px; }
+    margin: 50px 100px 20px 100px;
+    border: white; }
     section div.card div {
       padding: 0px; }
   div.espacio {
@@ -188,6 +179,12 @@ div.header-fondo {
     height: 60px; }
   div.espacioSuscripcion {
     padding: 20% 10% 10% 10%; }
+  h2.suscripcion {
+    font-weight: bold;
+    text-shadow: 0px 0px 5px black; }
+  h3.suscripcion {
+    font-weight: bold;
+    text-shadow: 0px 0px 5px black; }
   footer div {
     padding: 6px 0px 0px 0px;
     grid-column-gap: 10%; }

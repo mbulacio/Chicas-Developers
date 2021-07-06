@@ -1,29 +1,24 @@
 @media (min-width: 992px) {
-    h2.suscripcion {
-        font-weight: bold;
-        text-shadow: 0px 0px ($diezpx)-5 black;
-    }
-    h3.suscripcion {
-        font-weight: bold;
-        text-shadow: 0px 0px ($diezpx)-5 black;
-    }
     header {
-        div {
-            padding: ($diezpx)-5 0px ($diezpx)-7 0px;
-            grid-column-gap: $diezpor;
+        div.unico {
+            padding: ($diezpx) 0px ($diezpx)-5 0px;
+            grid-column-gap: ($diezpor)-3;
         }
     }
     .div__logo {
-        @include imagenes ($cienpx * 2, $diezpx * 5);
+        @include imagenes ($cienpx * 2 + 10, $diezpx * 5);
+        margin: 0px 0px 02px 0px;
     }
     .div__titulos {
         a {
             font-size: $diezpx*3;
-            font-weight: bold;
+            font-weight: $negrita;
+            margin: $diezpx 0px 0px 0px;
         }
     }
     .div__img {
         @include imagenes ($diezpx + 25, $diezpx + 25);
+        margin: $diezpx 0px 0px 0px;
     }
     body {
         h1 {
@@ -44,6 +39,7 @@
     section {
         div.card {
             margin: $cienpx/2 $cienpx $diezpx *2 $cienpx;
+            border: $blanco;
             div {
                 padding: 0px;
             }
@@ -59,6 +55,14 @@
     div.espacioSuscripcion {
         padding: $diezpor *2 $diezpor $diezpor $diezpor;
     }
+    h2.suscripcion {
+        font-weight: bold;
+        text-shadow: 0px 0px ($diezpx)-5 $negro;
+    }
+    h3.suscripcion {
+        font-weight: bold;
+        text-shadow: 0px 0px ($diezpx)-5 $negro;
+    }
     footer {
         div {
             padding: ($diezpx)- 4 0px 0px 0px;
@@ -72,7 +76,7 @@
         margin: 0% $diezpor 0% $diezpor;
     }
     div.espaciado {
-        margin: 40px 100px 40px 100px;
-        height: 200px;
+        margin: $diezpx*4 $cienpx $diezpx*4 $cienpx;
+        height: $cienpx *2;
     }
 }

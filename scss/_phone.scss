@@ -1,15 +1,9 @@
 @media (max-width: 575.98px) {
     //Inicio
     header {
-        div {
-            padding: 3px 0px 2px 0px;
-            grid-column-gap: 7%;
-        }
-    }
-    header {
         div.unico {
-            padding: 3px 0px 2px 0px;
-            grid-column-gap: 2%;
+            padding: ($diezpx)-7 0px ($diezpx)-8 0px;
+            grid-column-gap: ($diezpor)-8;
         }
     }
     .div__logo {
@@ -17,7 +11,9 @@
     }
     .div__titulos {
         a {
-            font-size: 90%;
+            font-size: ($cienpor)-10;
+            font-weight: $negrita;
+            margin: ($diezpx)-7;
         }
     }
     .div__img {
@@ -25,30 +21,30 @@
     }
     body {
         h1 {
-            font-size: 130%;
-            padding: $diezpx 0px 5px 0px;
+            font-size: $cienpor + 30;
+            padding: $diezpx 0px ($diezpx)-5 0px;
         }
     }
     div.espacio {
-        margin: ($diezpor)-8 10px ($diezpor)-5 10px;
+        margin: ($diezpor)-8 $diezpx ($diezpor)-5 $diezpx;
     }
     img.small {
         @include imagenes ($cienpx+50, $cienpx+60);
     }
     p {
-        font-size: 80%;
+        font-size: ($cienpor)-20;
     }
     body {
         article {
             p {
-                padding: 20px 5px 0px 10px;
+                padding: $diezpx*2 ($diezpx)-5 0px $diezpx;
             }
         }
     }
     section {
         div.card {
-            margin: 17px 10px 20px 10px;
-            border: white;
+            margin: $diezpx + 7 $diezpx $diezpx*2 $diezpx;
+            border: $blanco;
             div {
                 padding: 0px;
             }
@@ -56,51 +52,43 @@
     }
     div {
         input {
-            margin: 0px 10px 0px 0px;
-            height: 34px;
+            margin: 0px $diezpx 0px 0px;
+            height: $diezpx *3 + 4;
         }
     }
     div {
         button.btn {
-            height: 34px;
-            padding: 5px;
+            height: $diezpx *3 + 4;
+            padding: ($diezpx)-5;
         }
     }
     div.espacioSuscripcion {
-        padding: 7% 10% 5% 10%;
+        padding: ($diezpor)-3 $diezpor ($diezpor)-5 $diezpor;
     }
     h2.suscripcion {
-        font-size: 115%;
-        font-weight: bold;
-        text-shadow: 0px 0px ($diezpx)-5 black;
+        font-size: $cienpor + 15;
+        font-weight: $negrita;
+        text-shadow: 0px 0px ($diezpx)-5 $negro;
     }
     h3.suscripcion {
-        font-size: 100%;
+        font-size: $cienpor;
         font-weight: bold;
-        text-shadow: 0px 0px ($diezpx)-5 black;
+        text-shadow: 0px 0px ($diezpx)-5 $negro;
     }
     div.card-espacio {
         margin: 0%;
     }
     footer {
         div {
-            padding: 3px 0px 4px 0px;
-            grid-column-gap: 3%;
-        }
-    }
-    footer {
-        div {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-evenly;
-            align-items: stretch;
+            padding: ($diezpx)-7 0px ($diezpx)-6 0px;
+            grid-column-gap: ($diezpor)-7;
         }
     }
     img.div-centrar {
         margin: 0px;
     }
     div.espaciado {
-        margin: 100px 20px 100px 20px;
-        height: 200px;
+        margin: $cienpx $diezpx *2 $cienpx $diezpx *2;
+        height: $cienpx *2;
     }
 }
