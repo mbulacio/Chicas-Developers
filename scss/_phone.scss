@@ -6,6 +6,12 @@
             grid-column-gap: 7%;
         }
     }
+    header {
+        div.unico {
+            padding: 3px 0px 2px 0px;
+            grid-column-gap: 2%;
+        }
+    }
     .div__logo {
         @include imagenes (($cienpx)-25, $diezpx + 10);
     }
@@ -82,7 +88,19 @@
             grid-column-gap: 3%;
         }
     }
+    footer {
+        div {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            align-items: stretch;
+        }
+    }
     img.div-centrar {
         margin: 0px;
+    }
+    div.espaciado {
+        margin: 100px 20px 100px 20px;
+        height: 200px;
     }
 }
