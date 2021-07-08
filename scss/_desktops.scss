@@ -65,7 +65,7 @@
     }
     footer {
         div {
-            padding: ($diezpx)- 4 0px 0px 0px;
+            padding: ($diezpx)- 4 0px ($diezpx)-8 0px;
             grid-column-gap: $diezpor;
         }
     }
@@ -76,7 +76,20 @@
         margin: 0% $diezpor 0% $diezpor;
     }
     div.espaciado {
-        margin: $diezpx*4 $cienpx $diezpx*4 $cienpx;
+        margin: $cienpx*2 + 50 $cienpx*3 $cienpx*4 $cienpx*3;
         height: $cienpx *2;
+    }
+    section {
+        margin: $cienpx ($diezpx)-5 $diezpx*3 $cienpx*3;
+    }
+    button.agregarCarrito {
+        @include imagenes ($cienpx*4, $diezpx*2);
+    }
+    body {
+        section {
+            div.card-body {
+                padding: $cienpx 0px 0px 0px;
+            }
+        }
     }
 }

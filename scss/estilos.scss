@@ -22,14 +22,18 @@ header {
 }
 
 div.header-fondo {
-    background-color: white;
+    background-color: $blanco;
+}
+
+div.footer-fondo {
+    background-color: $blanco;
 }
 
 footer {
     div {
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: stretch;
     }
 }

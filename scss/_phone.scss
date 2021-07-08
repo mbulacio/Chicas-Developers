@@ -2,7 +2,7 @@
     //Inicio
     header {
         div.unico {
-            padding: ($diezpx)-7 0px ($diezpx)-8 0px;
+            @include padding (($diezpx)-7, 0px, ($diezpx)-8, 0px);
             grid-column-gap: ($diezpor)-8;
         }
     }
@@ -22,7 +22,7 @@
     body {
         h1 {
             font-size: $cienpor + 30;
-            padding: $diezpx 0px ($diezpx)-5 0px;
+            @include padding ($diezpx, 0px, ($diezpx)-5, 0px);
         }
     }
     div.espacio {
@@ -37,7 +37,7 @@
     body {
         article {
             p {
-                padding: $diezpx*2 ($diezpx)-5 0px $diezpx;
+                @include padding ($diezpx*2, ($diezpx)-5, 0px, $diezpx);
             }
         }
     }
@@ -59,11 +59,11 @@
     div {
         button.btn {
             height: $diezpx *3 + 4;
-            padding: ($diezpx)-5;
+            @include padding (($diezpx)-5, ($diezpx)-5, ($diezpx)-5, ($diezpx)-5);
         }
     }
     div.espacioSuscripcion {
-        padding: ($diezpor)-3 $diezpor ($diezpor)-5 $diezpor;
+        @include padding (($diezpor)-3, $diezpor, ($diezpor)-5, $diezpor);
     }
     h2.suscripcion {
         font-size: $cienpor + 15;
@@ -80,7 +80,7 @@
     }
     footer {
         div {
-            padding: ($diezpx)-7 0px ($diezpx)-6 0px;
+            @include padding (($diezpx)-7, 0px, ($diezpx)-6, 0px);
             grid-column-gap: ($diezpor)-7;
         }
     }
@@ -90,5 +90,29 @@
     div.espaciado {
         margin: $cienpx $diezpx *2 $cienpx $diezpx *2;
         height: $cienpx *2;
+    }
+    // productos
+    div.card-body {
+        h2 {
+            font-size: $cienpor + 5;
+        }
+    }
+    div.card-body {
+        h3 {
+            font-size: ($cienpor)-5;
+        }
+    }
+    section {
+        margin: $diezpx*4 ($diezpx)-5 $diezpx*4 ($diezpx)-7;
+    }
+    button.agregarCarrito {
+        @include imagenes ($cienpx + 50, $diezpx*2);
+    }
+    body {
+        section {
+            div.card-body {
+                @include padding ($diezpx+ 10, 0px, 0px, 0px);
+            }
+        }
     }
 }

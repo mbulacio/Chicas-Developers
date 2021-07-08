@@ -81,7 +81,7 @@
     }
     footer {
         div {
-            padding: ($diezpx)-5 0px ($diezpx)-5 0px;
+            padding: ($diezpx)-5 0px 2px 0px;
             grid-column-gap: ($diezpor)- 7;
         }
     }
@@ -95,7 +95,21 @@
         padding: $diezpx *2 ($cienpx)-10 ($cienpx)-40 ($cienpx)-10;
     }
     div.espaciado {
-        margin: $diezpx *4 $cienpx $diezpx *4 $cienpx;
+        margin: $cienpx*2 $cienpx $diezpx *4 $cienpx;
         height: $cienpx * 2;
+    }
+    // productos
+    section {
+        margin: $diezpx*4 5px $diezpx*4 50px;
+    }
+    button.agregarCarrito {
+        @include imagenes (250px, 20px);
+    }
+    body {
+        section {
+            div.card-body {
+                padding: $diezpx+ 15 0px 0px 0px;
+            }
+        }
     }
 }
