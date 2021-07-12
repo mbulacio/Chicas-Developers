@@ -44,6 +44,8 @@ localStorage.setItem("Productos", enJSON);
 
 //seccion productos
 
+const carrito = []
+
 const enProductos = document.getElementById("seccionProducto");
 
 for (const producto of productos) {
@@ -61,98 +63,29 @@ for (const producto of productos) {
                                 <h2>${ producto.type }</h2>
                                 <h3>Precio: ${ producto.price }</h3>
                                 <p class="card-text"><small class="text-muted">Stock: ${ producto.stock }</small></p>
-                                <button type="button" id="botonAgregar${ producto.id }" class="btn btn-outline-success agregarCarrito">Agregar al carrito</button>
+                                <button type="button" id="botonAgregar${ producto.id }" class="btn btn-outline-success agregarCarrito suscribite">Agregar al carrito</button>
                             </div>
                         </div>
                     </div>`;
 
     enProductos.appendChild(div);
-}
 
-const boton = document.getElementById("botonAgregarCTB");
+    function buscarId(prod) {
+        return prod.id === producto.id;
+    }
 
-const botonUno = document.getElementById("botonAgregarCTD");
+    function agregarAlCarrito() {
+        carrito.push(productos.find(buscarId));
+        console.log(carrito);
+        alert("Agregado con exito!");
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
 
-const botonDos = document.getElementById("botonAgregarCA");
+    const boton = document.getElementById(`botonAgregar${ producto.id }`)
 
-const botonTres = document.getElementById("botonAgregarCCR");
+    boton.addEventListener('click', () => {
 
-const botonCuatro = document.getElementById("botonAgregarCPS");
+        agregarAlCarrito(producto.id);
 
-cargarEventListeners();
-
-function cargarEventListeners() {
-
-    boton.addEventListener('click', agregarCarrito);
-
-    botonUno.addEventListener('click', agregarCarritoUno);
-
-    botonDos.addEventListener('click', agregarCarritoDos);
-
-    botonTres.addEventListener('click', agregarCarritoTres);
-
-    botonCuatro.addEventListener('click', agregarCarritoCuatro);
-}
-
-var agregarProducto;
-const carrito = []
-
-function idCtb(prod) {
-    return prod.id === "CTB";
-}
-
-function agregarCarrito() {
-    document.getElementById("botonAgregarCTB");
-    carrito.push(productos.find(idCtb))
-    console.log(carrito);
-    alert("Producto agregado al carrito!");
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-}
-
-function idCtd(prod) {
-    return prod.id === "CTD";
-}
-
-function agregarCarritoUno() {
-    document.getElementById("botonAgregarCTD");
-    carrito.push(productos.find(idCtd))
-    console.log(carrito);
-    alert("Producto agregado al carrito!");
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-}
-
-function idCa(prod) {
-    return prod.id === "CA";
-}
-
-function agregarCarritoDos() {
-    document.getElementById("botonAgregarCA");
-    carrito.push(productos.find(idCa))
-    console.log(carrito);
-    alert("Producto agregado al carrito!");
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-}
-
-function idCcr(prod) {
-    return prod.id === "CCR";
-}
-
-function agregarCarritoTres() {
-    document.getElementById("botonAgregarCCR");
-    carrito.push(productos.find(idCcr))
-    console.log(carrito);
-    alert("Producto agregado al carrito!");
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-}
-
-function idCps(prod) {
-    return prod.id === "CPS";
-}
-
-function agregarCarritoCuatro() {
-    document.getElementById("botonAgregarCPS");
-    carrito.push(productos.find(idCps))
-    console.log(carrito);
-    alert("Producto agregado al carrito!");
-    localStorage.setItem('carrito', JSON.stringify(carrito));
+    })
 }

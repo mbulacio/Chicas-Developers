@@ -1,33 +1,33 @@
 @media (min-width: 767px) {
     header {
         div.unico {
-            padding: ($diezpx)-8 0px ($diezpx)-7 0px;
+            @include padding (($diezpx)-8, 0px, ($diezpx)-7, 0px);
             grid-column-gap: ($diezpor)-7;
         }
     }
     .div__logo {
         @include imagenes ($cienpx + 30, $diezpx *3 + 5);
-        margin: $diezpx 0px 0px 0px;
+        @include margin ($diezpx, 0px, 0px, 0px);
     }
     div.div__titulos {
         a {
-            font-size: 160%;
-            margin: ($diezpx)-5 0px 0px 0px;
-            font-weight: bold;
+            font-size: $cienpor+60;
+            @include margin (($diezpx)-5, 0px, 0px, 0px);
+            font-weight: $negrita;
         }
     }
     .div__img {
         @include imagenes ($diezpx+20, $diezpx+22);
-        margin: $diezpx 0px $diezpx 0px;
+        @include margin ($diezpx, 0px, $diezpx, 0px);
     }
     body {
         h1 {
             font-size: $cienpor *2 + 20;
-            padding: $diezpx *3 0px $diezpx 0px;
+            @include padding ($diezpx *3, 0px, $diezpx, 0px);
         }
     }
     div.espacio {
-        margin: ($diezpor)-8 $cienpx/2 ($diezpor)-5 $cienpx/2;
+        @include margin (($diezpor)-8, $cienpx/2, ($diezpor)-5, $cienpx/2);
     }
     img.small {
         @include imagenes ($cienpx*2 + 40, $cienpx*2 + 50);
@@ -38,13 +38,13 @@
     body {
         article {
             p {
-                padding: $diezpx*3 $diezpx + 5 0px $diezpx + 5;
+                @include padding ($diezpx*3, $diezpx + 5, 0px, $diezpx + 5);
             }
         }
     }
     section {
         div.card {
-            margin: $diezpx*4 $diezpx*5 $diezpx*3 $diezpx*5;
+            @include margin ($diezpx*4, $diezpx*5, $diezpx*3, $diezpx*5);
             border: $blanco;
             div {
                 padding: 0px;
@@ -53,18 +53,18 @@
     }
     div {
         input {
-            margin: 0px ($cienpx)- 30 0px 0px;
+            @include margin (0px, ($cienpx)- 30, 0px, 0px);
             height: ($cienpx)- 40;
         }
     }
     div {
-        button.btn {
+        button.suscribite {
             height: ($cienpx)- 40;
-            padding: $diezpx;
+            @include padding ($diezpx, $diezpx, $diezpx, $diezpx);
         }
     }
     div.espacioSuscripcion {
-        padding: $diezpor + 5 ($diezpor)-5 ($diezpor)-5 ($diezpor)-5;
+        @include padding ($diezpor + 5, ($diezpor)-5, ($diezpor)-5, ($diezpor)-5);
     }
     h2.suscripcion {
         font-size: $cienpor *2;
@@ -73,7 +73,7 @@
     }
     h3.suscripcion {
         font-size: $cienpor + 80;
-        font-weight: bold;
+        font-weight: $negrita;
         text-shadow: 0px 0px ($diezpx)-5 $negro;
     }
     div.card-espacio {
@@ -81,7 +81,7 @@
     }
     footer {
         div {
-            padding: ($diezpx)-5 0px 2px 0px;
+            @include padding (($diezpx)-5, 0px, 2px, 0px);
             grid-column-gap: ($diezpor)- 7;
         }
     }
@@ -89,18 +89,18 @@
         margin: 0px;
     }
     h1.espacios {
-        margin: $diezpx *2 0px 0px 0px;
+        @include margin ($diezpx *2, 0px, 0px, 0px);
     }
     p.espacios {
-        padding: $diezpx *2 ($cienpx)-10 ($cienpx)-40 ($cienpx)-10;
+        @include padding ($diezpx *2, ($cienpx)-10, ($cienpx)-40, ($cienpx)-10);
     }
     div.espaciado {
-        margin: $cienpx*2 $cienpx $diezpx *4 $cienpx;
+        @include margin ($cienpx*2, $cienpx, $diezpx *4, $cienpx);
         height: $cienpx * 2;
     }
     // productos
     section {
-        margin: $diezpx*4 5px $diezpx*4 50px;
+        @include margin ($diezpx*4, 5px, $diezpx*4, 50px);
     }
     button.agregarCarrito {
         @include imagenes (250px, 20px);
@@ -108,8 +108,13 @@
     body {
         section {
             div.card-body {
-                padding: $diezpx+ 15 0px 0px 0px;
+                @include padding ($diezpx+ 15, 0px, 0px, 0px);
             }
         }
+    }
+    button.tamañoMasProductos {
+        @include imagenes ($diezpx *2 + 5, $diezpx*2 + 5);
+        @include padding (0px, $diezpx+5, 3px, ($diezpx)-3);
+        @include margin (0px, ($diezpx)-3, 0px, ($diezpx)-5);
     }
 }
