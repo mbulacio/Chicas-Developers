@@ -1,4 +1,4 @@
-let carrito = [];
+var carrito = [];
 
 const prodEnCarrito = JSON.parse(localStorage.getItem('carrito'));
 
@@ -14,10 +14,12 @@ for (const prodEnCarrito of carrito) {
 
     leerLS.innerHTML = `<th scope="row">${ prodEnCarrito.id }</th>
                       <td>${ prodEnCarrito.type}</td>
-                      <td id="cantidad${ prodEnCarrito.id }"><button type="button" class="btn btn-outline-warning btn-sm tamañoMasProductos" id="botonMas${ prodEnCarrito.id }">+</button>${prod}</td>
+                      <td>${prod}</td>
                       <td>${ prodEnCarrito.price }</td>`;
 
     document.getElementById("carrito-producto").appendChild(leerLS);
+
+
 
     const vaciar = document.getElementById("vaciar");
     vaciar.addEventListener('click', () => {
@@ -27,21 +29,17 @@ for (const prodEnCarrito of carrito) {
     function vaciarCarrito() {
         localStorage.removeItem('carrito');
         document.getElementById("carrito-producto").innerHTML = ``;
+        document.getElementById("carrito-producto").innerHTML = ``;
     }
-
-    const masProd = document.getElementById(`botonMas${ prodEnCarrito.id }`);
-    masProd.addEventListener('click', () => {
-        sumarProd(prod)
-    });
-
-    function sumarProd(prod) {
-        leerLS.innerHTML =
-            `<th scope="row">${ prodEnCarrito.id }</th>
-            <td>${ prodEnCarrito.type}</td>
-            <td id="cantidad${ prodEnCarrito.id }"><button type="button" class="btn btn-outline-warning btn-sm tamañoMasProductos" id="botonMas${ prodEnCarrito.id }">+</button>${prod + 1}</td>
-            <td>${ prodEnCarrito.price * 2}</td>`;
-    }
-
-
-
 }
+
+const total = Object.values(carrito).reduce((acc, { price }) => acc + price, 0)
+
+let totalCarrito = document.createElement("tr");
+
+totalCarrito.innerHTML = `<th></th>
+                    <td></td>
+                    <th scope="col">Total</th>
+                    <td>${ total }</td>`;
+
+document.getElementById("carrito-producto").appendChild(totalCarrito);
