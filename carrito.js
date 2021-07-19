@@ -8,38 +8,44 @@ if (prodEnCarrito) {
 
 for (const prodEnCarrito of carrito) {
 
-    var prod = 1;
+    $("#carrito-producto").append(`
+    <tr id="${ prodEnCarrito.id }">
+        <th scope="row">${ prodEnCarrito.id }</th>
+            <td>${ prodEnCarrito.type}</td>
+            <td>${ prodEnCarrito.cant }</td>
+            <td>${ prodEnCarrito.price * prodEnCarrito.cant } </td>
+            <td>
+                <button id="borrarProducto${ prodEnCarrito.id }"type="button" class="btn btn-danger btn-sm">X</button>
+            </td>
+    </tr>`);
 
-    let leerLS = document.createElement("tr");
 
-    leerLS.innerHTML = `<th scope="row">${ prodEnCarrito.id }</th>
-                      <td>${ prodEnCarrito.type}</td>
-                      <td>${prod}</td>
-                      <td>${ prodEnCarrito.price }</td>`;
-
-    document.getElementById("carrito-producto").appendChild(leerLS);
-
-
-
-    const vaciar = document.getElementById("vaciar");
-    vaciar.addEventListener('click', () => {
-        vaciarCarrito()
+    $(`#borrarProducto${ prodEnCarrito.id }`).click(() => {
+        borrarProducto();
     });
 
-    function vaciarCarrito() {
-        localStorage.removeItem('carrito');
-        document.getElementById("carrito-producto").innerHTML = ``;
-        document.getElementById("carrito-producto").innerHTML = ``;
+    function borrarProducto() {
+        $(`#${ prodEnCarrito.id }`).remove();
+        $("#total").text(`${total -= prodEnCarrito.price * prodEnCarrito.cant}`);
     }
+
 }
 
-const total = Object.values(carrito).reduce((acc, { price }) => acc + price, 0)
+var total = carrito.reduce((acc, { cant, price }) => acc + cant * price, 0);
 
-let totalCarrito = document.createElement("tr");
+$("#carrito-producto").append(`
+    <tr>
+    <th></th>
+    <td></td>
+    <th scope="col">Total</th>
+    <td id="total">${ total }</td>
+    </tr>`);
 
-totalCarrito.innerHTML = `<th></th>
-                    <td></td>
-                    <th scope="col">Total</th>
-                    <td>${ total }</td>`;
+$("#vaciar").click(() => {
+    vaciarCarrito()
+});
 
-document.getElementById("carrito-producto").appendChild(totalCarrito);
+function vaciarCarrito() {
+    localStorage.removeItem('carrito');
+    $("#carrito-producto").text(``);
+}

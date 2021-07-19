@@ -35,19 +35,37 @@
     p {
         font-size: $cienpor + 50;
     }
+    // noticias
+    section {
+        div.noticias {
+            @include margin ($diezpx*5, $diezpx*3, $diezpx*5, $diezpx*3);
+            border: $blanco;
+            div {
+                padding: 0px;
+            }
+        }
+    }
+    body {
+        article {
+            p.parrafoNoticias {
+                @include padding ($diezpx*3, $diezpx*2, 0px, $diezpx*2);
+            }
+        }
+    }
+    // productos
+    section {
+        div.productos {
+            @include margin ($diezpx*4, $diezpx*6, $diezpx*3, $cienpx);
+            border: $blanco;
+            div {
+                padding: 0px;
+            }
+        }
+    }
     body {
         article {
             p {
                 @include padding ($diezpx*3, $diezpx + 5, 0px, $diezpx + 5);
-            }
-        }
-    }
-    section {
-        div.card {
-            @include margin ($diezpx*4, $diezpx*5, $diezpx*3, $diezpx*5);
-            border: $blanco;
-            div {
-                padding: 0px;
             }
         }
     }
@@ -99,7 +117,7 @@
         height: $cienpx * 2;
     }
     // productos
-    section {
+    section.enProductos {
         @include margin ($diezpx*4, 5px, $diezpx*4, 50px);
     }
     button.agregarCarrito {
@@ -108,13 +126,13 @@
     body {
         section {
             div.card-body {
-                @include padding ($diezpx+ 15, 0px, 0px, 0px);
+                @include padding ($diezpx*2+5, 0px, 0px, 0px);
+            }
+            p.agregado {
+                @include padding ($diezpx, 0px, 0px, 0px);
+                font-weight: $negrita;
+                color: rgb(3, 85, 3);
             }
         }
-    }
-    button.tamañoMasProductos {
-        @include imagenes ($diezpx *2 + 5, $diezpx*2 + 5);
-        @include padding (0px, $diezpx+5, 3px, ($diezpx)-3);
-        @include margin (0px, ($diezpx)-3, 0px, ($diezpx)-5);
     }
 }
