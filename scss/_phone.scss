@@ -106,8 +106,9 @@
         @include margin (0px, 0px, 0px, 0px);
     }
     div.espaciado {
-        @include margin ($cienpx, $diezpx *2, $cienpx, $diezpx *2);
-        height: $cienpx *2;
+        @include margin ($cienpx, $diezpx, $cienpx, $diezpx);
+        padding: 0px 5px 0px 3px;
+        height: $cienpx *5;
     }
     // productos
     div.card-body {
@@ -137,5 +138,31 @@
                 color: rgb(3, 85, 3);
             }
         }
+    }
+    // carrito
+    button.botonesCarrito {
+        width: 20px;
+        height: 20px;
+        padding: 0px 0px 24px 0px;
+        font-size: 15px;
+    }
+    td {
+        button.sumar {
+            margin: 0px 5px 0px 0px;
+        }
+    }
+    td {
+        button.restar {
+            margin: 0px 0px 0px 5px;
+        }
+    }
+    td {
+        p.pCarrito {
+            font-size: 16px;
+        }
+    }
+    thead.color {
+        background-color: rgba(0, 0, 0, 0.164);
+        color: white;
     }
 }

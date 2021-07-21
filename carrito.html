@@ -46,24 +46,28 @@
 
     <br>
     <br>
-    <div class="espaciado">
-        <table class="table">
-            <thead>
+    <div class="espaciado table-responsive-sm">
+        <table class="table table-borderless">
+            <thead class="shadow p-3 mb-5 bg-body rounded">
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Descripcion</th>
                     <th scope="col">Cantidad</th>
                     <th scope="col">Precio</th>
                     <th scope="col"></th>
+
                 </tr>
             </thead>
             <tbody id="carrito-producto">
 
             </tbody>
         </table>
-        <div class="d-grid gap-2 col-6 mx-auto">
-            <button id="vaciar" class="btn btn-outline-danger">Vaciar carrito</button>
-        </div>
+        <tfoot>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button id="vaciar" class="btn btn-outline-danger">Vaciar carrito</button>
+            </div>
+        </tfoot>
+
     </div>
 
 

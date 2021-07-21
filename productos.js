@@ -73,13 +73,13 @@ for (const producto of productos) {
 
 
     function agregarAlCarrito(id) {
-        var itemEnCart = carrito.find(prod => prod.id === id);
+        var comprobarDuplicado = carrito.find(prod => prod.id === id);
 
-        if (itemEnCart) {
-            itemEnCart.cant += 1
+        if (comprobarDuplicado) {
+            comprobarDuplicado.cant += 1
         } else {
-            const itemAgregar = productos.find(prod => prod.id === id);
-            carrito.push(itemAgregar);
+            const agregar = productos.find(prod => prod.id === id);
+            carrito.push(agregar);
         }
 
         $(`#agregadoAlCarrito${ producto.id }`)

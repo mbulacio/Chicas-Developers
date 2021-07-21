@@ -116,4 +116,26 @@
             }
         }
     }
+    // carrito
+    button.botonesCarrito {
+        width: 24px;
+        height: 24px;
+        padding: 0px 0px 24px 0px;
+        font-size: 15px;
+    }
+    td {
+        button.sumar {
+            margin: 0px 5px 2px 0px;
+        }
+    }
+    td {
+        button.restar {
+            margin: 0px 0px 0px 5px;
+        }
+    }
+    td {
+        p.pCarrito {
+            font-size: 16px;
+        }
+    }
 }
