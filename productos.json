@@ -1,0 +1,43 @@
+{
+    "productos": [{
+            "id": "CTB",
+            "type": "Cuaderno Tapa Blanda",
+            "price": 600,
+            "stock": 15,
+            "img": "./imagenes/Productos/CoolAnillado.jpg",
+            "cant": 1
+        },
+        {
+            "id": "CTD",
+            "type": "Cuaderno Tapa Dura",
+            "price": 700,
+            "stock": 24,
+            "img": "./imagenes/Productos/RichTapaDura.jpg",
+            "cant": 1
+        },
+        {
+            "id": "CA",
+            "type": "Cuaderno Anillado",
+            "price": 800,
+            "stock": 10,
+            "img": "./imagenes/Productos/GatitoAnillado.jpg",
+            "cant": 1
+        },
+        {
+            "id": "CCR",
+            "type": "Cuaderno Con Relieve",
+            "price": 900,
+            "stock": 7,
+            "img": "./imagenes/Productos/PlaquetaTapaDura.jpg",
+            "cant": 1
+        },
+        {
+            "id": "CPS",
+            "type": "Cuaderno Para Sketch",
+            "price": 500,
+            "stock": 12,
+            "img": "./imagenes/Productos/StichAnillado.png",
+            "cant": 1
+        }
+    ]
+}

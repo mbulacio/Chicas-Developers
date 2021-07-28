@@ -23,26 +23,33 @@ for (const prodEnCarrito of carrito) {
     </tr>`);
 
     $(`#sumar${ prodEnCarrito.id }`).click(() => {
-        sumarProducto();
+        sumarProducto(prodEnCarrito.id);
     });
 
-    function sumarProducto() {
+    function sumarProducto(id) {
         if (prodEnCarrito.cant < prodEnCarrito.stock) {
+            carrito.find(prod => prod.id === id);
+            carrito.cant += 1
             $(`#cantidad${ prodEnCarrito.id }`).text(`${ prodEnCarrito.cant += 1}`);
             $(`#precio${ prodEnCarrito.id }`).text(`${ prodEnCarrito.cant * prodEnCarrito.price }`);
             $("#total").text(`${total += prodEnCarrito.price}`);
+            console.log(carrito)
+            localStorage.setItem('carrito', JSON.stringify(carrito));
         }
     }
 
     $(`#restar${ prodEnCarrito.id }`).click(() => {
-        restarProducto();
+        restarProducto(prodEnCarrito.id);
     });
 
-    function restarProducto() {
+    function restarProducto(id) {
         if (prodEnCarrito.cant > 1) {
+            carrito.find(prod => prod.id === id);
+            carrito[0].cant - 1
             $(`#cantidad${ prodEnCarrito.id }`).text(`${ prodEnCarrito.cant -= 1}`);
             $(`#precio${ prodEnCarrito.id }`).text(`${ prodEnCarrito.cant * prodEnCarrito.price }`);
             $("#total").text(`${total -= prodEnCarrito.price }`);
+            localStorage.setItem('carrito', JSON.stringify(carrito));
         }
     }
 
@@ -54,25 +61,59 @@ for (const prodEnCarrito of carrito) {
     function borrarProducto() {
         $(`#${ prodEnCarrito.id }`).remove();
         $("#total").text(`${total -= prodEnCarrito.price * prodEnCarrito.cant}`);
+        if (total > 0) {
+            $("#botonComprar").fadeIn(1);
+        } else {
+            $("#botonComprar").fadeOut(1);
+            $("#elTotal").text(``);
+        }
     }
 
 }
 
-var total = carrito.reduce((acc, { cant, price }) => acc + cant * price, 0);
+
+var total = carrito.reduce((acc, {
+    cant,
+    price
+}) => acc + cant * price, 0);
 
 $("#carrito-producto").append(`
-    <tr>
+    <tr id="elTotal">
     <th></th>
     <td></td>
     <th scope="col">Total</th>
     <td id="total">${ total }</td>
     </tr>`);
 
-$("#vaciar").click(() => {
+if (total > 0) {
+    $("#botonComprar").fadeIn(1);
+} else {
+    $("#botonComprar").fadeOut(1);
+    $("#elTotal").text(``);
+}
+
+$("#botonComprar").click(() => {
+    comprarCarrito();
+});
+
+function comprarCarrito() {
+    $("#datosParaCompra").fadeIn("fast");
+}
+
+$("#botonFinalizarCompra").click(() => {
+    finalizarCompra();
+});
+
+function finalizarCompra() {
+    $("#datosParaCompra").fadeOut("fast");
+}
+
+$("#botonVaciar").click(() => {
     vaciarCarrito()
 });
 
 function vaciarCarrito() {
     localStorage.removeItem('carrito');
     $("#carrito-producto").text(``);
+    $("#botonComprar").fadeOut(1);
 }
