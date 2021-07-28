@@ -102,6 +102,7 @@ function comprarCarrito() {
 
 $("#botonFinalizarCompra").click(() => {
     finalizarCompra();
+    vaciarCarrito();
 });
 
 function finalizarCompra() {
