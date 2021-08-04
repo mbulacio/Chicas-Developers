@@ -1,5 +1,5 @@
 @media (max-width: 575.98px) {
-    //Inicio
+    //header
     header {
         div.unico {
             @include padding (($diezpx)-7, 0px, ($diezpx)-8, 0px);
@@ -17,7 +17,10 @@
         }
     }
     .div__img {
-        @include imagenes ($diezpx+7, $diezpx+7);
+        @include imagenes ($diezpx + 8, $diezpx + 8);
+    }
+    img.div-centrar {
+        @include margin (0px, 0px, 0px, 0px);
     }
     body {
         h1 {
@@ -40,7 +43,7 @@
             @include margin ($diezpx*2, $diezpx, $diezpx*2, $diezpx);
             border: $blanco;
             div {
-                padding: 0px;
+                @include padding (0px, 0px, 0px, 0px);
             }
         }
     }
@@ -51,23 +54,7 @@
             }
         }
     }
-    // productos
-    section {
-        div.productos {
-            @include margin ($diezpx + 7, $diezpx, $diezpx*2, $diezpx);
-            border: $blanco;
-            div {
-                padding: 0px;
-            }
-        }
-    }
-    body {
-        article {
-            p {
-                @include padding ($diezpx*2, ($diezpx)-5, 0px, $diezpx);
-            }
-        }
-    }
+    // suscripcion
     div {
         input {
             @include margin(0px, $diezpx, 0px, 0px);
@@ -94,7 +81,7 @@
         text-shadow: 0px 0px ($diezpx)-5 $negro;
     }
     div.card-espacio {
-        margin: 0%;
+        @include margin (0%, 0%, 0%, 0%);
     }
     footer {
         div {
@@ -102,15 +89,16 @@
             grid-column-gap: ($diezpor)-7;
         }
     }
-    img.div-centrar {
-        @include margin (0px, 0px, 0px, 0px);
-    }
-    div.espaciado {
-        @include margin ($cienpx, $diezpx, $cienpx, $diezpx);
-        padding: 0px 5px 0px 3px;
-        height: $cienpx *5;
-    }
     // productos
+    section {
+        div.productos {
+            @include margin ($diezpx, $diezpx, $diezpx, $diezpx);
+            border: $blanco;
+            div {
+                @include padding (0px, 0px, 0px, 0px);
+            }
+        }
+    }
     div.card-body {
         h2 {
             font-size: $cienpor + 5;
@@ -122,7 +110,13 @@
         }
     }
     section.enProductos {
-        @include margin ($diezpx*4, ($diezpx)-5, $diezpx*4, ($diezpx)-7);
+        @include margin ($diezpx*2, ($diezpx)-5, $diezpx*4, ($diezpx)-7);
+    }
+    a.botonDescripcion {
+        @include imagenes($diezpx* 6, 0px);
+        @include padding (0px, 1px, $diezpx*2, 0px);
+        @include margin (0px, 0px, 0px, $diezpx);
+        font-size: $diezpx + 3;
     }
     button.agregarCarrito {
         @include imagenes ($cienpx + 50, $diezpx*2);
@@ -130,7 +124,7 @@
     body {
         section {
             div.card-body {
-                @include padding ($diezpx+ 10, 0px, 0px, 0px);
+                @include padding ($diezpx*2, 0px, 0px, 0px);
             }
             p.agregado {
                 @include padding ($diezpx, 0px, 0px, 0px);
@@ -139,30 +133,57 @@
             }
         }
     }
+    // producto solo
+    div.agregarProductoSolo {
+        @include margin (0px, 0px, 0px, $cienpx);
+    }
+    p.agregadoProductoSolo {
+        @include padding (($diezpx)-5, 0px, 0px, 0px);
+        font-weight: $negrita;
+        color: rgb(3, 85, 3);
+        font-size: $diezpx + 5;
+    }
     // carrito
+    div.espaciado {
+        @include margin ($diezpx*3, $diezpx, $diezpx, ($diezpx)-2);
+        @include padding (0px, ($diezpx)-5, 0px, ($diezpx)-7);
+        height: $cienpx *5;
+    }
     button.botonesCarrito {
-        width: 20px;
-        height: 20px;
-        padding: 0px 0px 24px 0px;
-        font-size: 15px;
+        @include imagenes($diezpx*2, $diezpx*2);
+        @include padding (0px, 0px, $diezpx*2 + 4, 0px);
+        font-size: $diezpx + 5;
     }
     td {
         button.sumar {
-            margin: 0px 5px 0px 0px;
+            @include margin (0px, ($diezpx)-5, 0px, 0px);
         }
     }
     td {
         button.restar {
-            margin: 0px 0px 0px 5px;
+            @include margin (0px, 0px, 0px, ($diezpx)-5);
+        }
+    }
+    td {
+        button.borrar-producto {
+            @include imagenes($diezpx*2 + 4, $diezpx*2 + 2);
+            @include padding (0px, 0px, $diezpx*2 + 5, 0px);
+            img.botonBorrarProducto {
+                @include imagenes($diezpx*2 + 1, $diezpx*2);
+            }
         }
     }
     td {
         p.pCarrito {
-            font-size: 16px;
+            font-size: $diezpx+6;
         }
     }
     thead.color {
         background-color: rgba(0, 0, 0, 0.164);
-        color: white;
+        color: $blanco;
+    }
+    a#volverAlInicio {
+        color: $blanco;
+        @include margin ($cienpx, $diezpx*3, 0px, $diezpx*3);
     }
 }

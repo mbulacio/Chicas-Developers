@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda online de cuadernos con diseños unicos">
+    <meta name="keywords" content="Información de producto, tienda de cuadernos, tienda online, cuadernos con diseños unicos">
     <title>Chicas Developers</title>
 
     <link rel="stylesheet" href="css/estilos.css">
@@ -17,6 +19,7 @@
 </head>
 
 <body>
+    <!-- header -->
     <header>
         <div>
             <p></p>
@@ -37,131 +40,89 @@
                 <a href="nosotros.html">Nosotros</a>
             </div>
             <div>
-                <a href="carrito.html">
+                <a href="carrito.html" id="carritoLleno">
                     <img src="imagenes/carrito.png" class="div__img" alt="carrito">
                 </a>
             </div>
         </div>
     </header>
-    <div id="carouselExampleControls" class="carousel slide espacio" data-bs-ride="carousel">
-        <div class="carousel-inner text-center">
-            <div class="carousel-item active">
-                <img src="imagenes/productos destacados/1 cuad arcoiris1.png" class="w-100 d-block" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="imagenes/productos destacados/1 cuad codigo1.png" class="w-100 d-block" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="imagenes/productos destacados/1 cuad flowers.png" class="w-100 d-block" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="imagenes/productos destacados/1 cuad gatito.png" class="w-100 d-block" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="imagenes/productos destacados/1 cuad hojas.png" class="w-100 d-block" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="imagenes/productos destacados/1 cuad mujeres.png" class="w-100 d-block" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="imagenes/productos destacados/1 cuad support.png" class="w-100 d-block" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+
+    <!-- Imagen de producto -->
+
+    <div id="imagenDeProductoSolo" class="d-flex justify-content-center">
+
     </div>
+
+    <!-- Descripcion de producto -->
+
     <div>
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Descripcion</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Precio</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">Cod.</th>
-                    <td>Nombre producto</td>
-                    <td></td>
-                    <td>Precio</td>
-                </tr>
+            <tbody id="descripcionDeProductoSolo">
+
             </tbody>
         </table>
+        <section class="d-flex">
+            <div id="agregarProductoSolo" class="d-flex justify-content-center agregarProductoSolo">
 
-        <div class="text-center">
-            <h1>Productos Relacionados</h1>
-        </div>
+            </div>
+        </section>
+
+        <!-- info del producto -->
 
         <section>
-            <div class="card d-flex flex-row card--producto">
+            <div class="noticias card d-flex flex-row">
                 <div class="d-flex justify-content-center">
-                    <a href="productoSolo.html">
-                        <img src="imagenes/Productos/CoolAnillado.jpg" class="small" alt="articulo">
-                    </a>
+                    <img src="imagenes/DetalleProducto/hecho-de.jpg" class="small" alt="articulo">
                 </div>
                 <div class="d-flex justify-content-center">
                     <article>
-                        <p>
-                            <strong>Cuaderno Tapa Blanda</strong>
-                            <br>
-                            <strong>Precio:</strong> 600
-                            <br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui illo aspernatur cumque natus Omnis, facere ad a
+                        <p class="parrafoNoticias">
+                            <strong>Hecho de</strong><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio optio ut quasi quaerat tempore necessitatibus accusamus itaque eos modi.
                         </p>
                     </article>
                 </div>
             </div>
         </section>
-        <br>
-        <section>
-            <div class="card d-flex flex-row card--producto">
-                <div class="d-flex justify-content-center">
-                    <article>
-                        <p>
-                            <strong>Cuaderno Con Relieve</strong>
-                            <br>
-                            <strong>Precio:</strong> 900
-                            <br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui illo aspernatur cumque natus Omnis, facere ad a
 
+        <section>
+            <div class="noticias card d-flex flex-row">
+                <div class="d-flex justify-content-center">
+                    <article>
+                        <p class="parrafoNoticias">
+                            <strong>Pensado para ti</strong><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio optio ut quasi quaerat tempore necessitatibus accusamus itaque eos modi.
                         </p>
                     </article>
                 </div>
                 <div class="d-flex justify-content-center">
-                    <a href="productoSolo.html">
-                        <img src="imagenes/Productos/PlaquetaTapaDura.jpg" class="small" alt="articulo">
-                    </a>
+                    <img src="imagenes/DetalleProducto/pensado-para-ti.JPG" class="small" alt="articulo">
                 </div>
             </div>
         </section>
-        <br>
+
         <section>
-            <div class="card d-flex flex-row card--producto">
+            <div class="noticias card d-flex flex-row">
                 <div class="d-flex justify-content-center">
-                    <a href="productoSolo.html">
-                        <img src="imagenes/Productos/StichAnillado.png" class="small" alt="articulo">
-                    </a>
+                    <img src="imagenes/DetalleProducto/como-lo-utilizo.jpg" class="small" alt="articulo">
                 </div>
                 <div class="d-flex justify-content-center">
                     <article>
-                        <p>
-                            <strong>Cuaderno Para Sketch</strong>
-                            <br>
-                            <strong>Precio:</strong> 500
-                            <br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui illo aspernatur cumque natus Omnis, facere ad a
+                        <p class="parrafoNoticias">
+                            <strong>Como utilizarlo</strong><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio optio ut quasi quaerat tempore necessitatibus accusamus itaque eos modi.
                         </p>
                     </article>
                 </div>
             </div>
         </section>
-        <br>
-        <br>
+        <!-- footer -->
+
         <footer>
             <div>
                 <p></p>
@@ -193,6 +154,11 @@
                 </div>
             </div>
         </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+        <script src="productoSolo.js"></script>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
 </body>

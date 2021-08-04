@@ -36,8 +36,10 @@ footer div {
     font-weight: bold;
     margin: 3px 3px 3px 3px; }
   .div__img {
-    width: 17px;
-    height: 17px; }
+    width: 18px;
+    height: 18px; }
+  img.div-centrar {
+    margin: 0px 0px 0px 0px; }
   body h1 {
     font-size: 130%;
     padding: 10px 0px 5px 0px; }
@@ -52,16 +54,9 @@ footer div {
     margin: 20px 10px 20px 10px;
     border: white; }
     section div.noticias div {
-      padding: 0px; }
+      padding: 0px 0px 0px 0px; }
   body article p.parrafoNoticias {
     padding: 20px 15px 0px 15px; }
-  section div.productos {
-    margin: 17px 10px 20px 10px;
-    border: white; }
-    section div.productos div {
-      padding: 0px; }
-  body article p {
-    padding: 20px 5px 0px 10px; }
   div input {
     margin: 0px 10px 0px 0px;
     height: 34px; }
@@ -79,22 +74,27 @@ footer div {
     font-weight: bold;
     text-shadow: 0px 0px 5px black; }
   div.card-espacio {
-    margin: 0%; }
+    margin: 0% 0% 0% 0%; }
   footer div {
     padding: 3px 0px 4px 0px;
     grid-column-gap: 3%; }
-  img.div-centrar {
-    margin: 0px 0px 0px 0px; }
-  div.espaciado {
-    margin: 100px 10px 100px 10px;
-    padding: 0px 5px 0px 3px;
-    height: 500px; }
+  section div.productos {
+    margin: 10px 10px 10px 10px;
+    border: white; }
+    section div.productos div {
+      padding: 0px 0px 0px 0px; }
   div.card-body h2 {
     font-size: 105%; }
   div.card-body h3 {
     font-size: 95%; }
   section.enProductos {
-    margin: 40px 5px 40px 3px; }
+    margin: 20px 5px 40px 3px; }
+  a.botonDescripcion {
+    width: 60px;
+    height: 0px;
+    padding: 0px 1px 20px 0px;
+    margin: 0px 0px 0px 10px;
+    font-size: 13px; }
   button.agregarCarrito {
     width: 150px;
     height: 20px; }
@@ -104,6 +104,17 @@ footer div {
     padding: 10px 0px 0px 0px;
     font-weight: bold;
     color: #035503; }
+  div.agregarProductoSolo {
+    margin: 0px 0px 0px 100px; }
+  p.agregadoProductoSolo {
+    padding: 5px 0px 0px 0px;
+    font-weight: bold;
+    color: #035503;
+    font-size: 15px; }
+  div.espaciado {
+    margin: 30px 10px 10px 8px;
+    padding: 0px 5px 0px 3px;
+    height: 500px; }
   button.botonesCarrito {
     width: 20px;
     height: 20px;
@@ -113,11 +124,21 @@ footer div {
     margin: 0px 5px 0px 0px; }
   td button.restar {
     margin: 0px 0px 0px 5px; }
+  td button.borrar-producto {
+    width: 24px;
+    height: 22px;
+    padding: 0px 0px 25px 0px; }
+    td button.borrar-producto img.botonBorrarProducto {
+      width: 21px;
+      height: 20px; }
   td p.pCarrito {
     font-size: 16px; }
   thead.color {
     background-color: rgba(0, 0, 0, 0.164);
-    color: white; } }
+    color: white; }
+  a#volverAlInicio {
+    color: white;
+    margin: 100px 30px 0px 30px; } }
 
 @media (min-width: 767px) {
   header div.unico {
@@ -135,6 +156,9 @@ footer div {
     width: 30px;
     height: 32px;
     margin: 10px 0px 10px 0px; }
+  img.div-centrar {
+    margin: 0px 0px 0px 0px;
+    margin: 0px; }
   body h1 {
     font-size: 220%;
     padding: 30px 0px 10px 0px; }
@@ -149,16 +173,9 @@ footer div {
     margin: 50px 30px 50px 30px;
     border: white; }
     section div.noticias div {
-      padding: 0px; }
+      padding: 0px 0px 0px 0px; }
   body article p.parrafoNoticias {
     padding: 30px 20px 0px 20px; }
-  section div.productos {
-    margin: 40px 60px 30px 100px;
-    border: white; }
-    section div.productos div {
-      padding: 0px; }
-  body article p {
-    padding: 30px 15px 0px 15px; }
   div input {
     margin: 0px 70px 0px 0px;
     height: 60px; }
@@ -176,44 +193,72 @@ footer div {
     font-weight: bold;
     text-shadow: 0px 0px 5px black; }
   div.card-espacio {
-    margin: 0%; }
+    margin: 0% 0% 0% 0%; }
   footer div {
     padding: 5px 0px 2px 0px;
     grid-column-gap: 3%; }
-  img.div-centrar {
-    margin: 0px; }
   h1.espacios {
     margin: 20px 0px 0px 0px; }
   p.espacios {
     padding: 20px 90px 60px 90px; }
-  div.espaciado {
-    margin: 200px 100px 40px 100px;
-    height: 200px; }
+  section div.productos {
+    margin: 40px 60px 30px 100px;
+    border: white; }
+    section div.productos div {
+      padding: 0px 0px 0px 0px; }
   section.enProductos {
     margin: 40px 5px 40px 50px; }
+  a.botonDescripcion {
+    width: 100px;
+    height: 0px;
+    padding: 0px 1px 30px 0px;
+    margin: 5px 0px 0px 10px;
+    font-size: 20px; }
   button.agregarCarrito {
     width: 250px;
-    height: 20px; }
+    height: 20px;
+    font-size: 20px; }
   body section div.card-body {
     padding: 25px 0px 0px 0px; }
   body section p.agregado {
     padding: 10px 0px 0px 0px;
     font-weight: bold;
     color: #035503; }
+  div.agregarProductoSolo {
+    margin: 0px 0px 0px 250px; }
+  p.agregadoProductoSolo {
+    padding: 10px 0px 0px 5px;
+    font-weight: bold;
+    color: #035503;
+    font-size: 25px; }
   button.botonesCarrito {
     width: 24px;
     height: 24px;
     padding: 0px 0px 24px 0px;
-    font-size: 15px; }
+    font-size: 17px; }
   td button.sumar {
     margin: 0px 5px 0px 0px; }
   td button.restar {
     margin: 0px 0px 0px 5px; }
+  td button.borrar-producto {
+    width: 27px;
+    height: 26px;
+    padding: 0px 0px 27px 0px; }
+    td button.borrar-producto img.botonBorrarProducto {
+      width: 23px;
+      height: 22px; }
   td p.pCarrito {
     font-size: 16px; }
   thead.color {
     background-color: rgba(0, 0, 0, 0.164);
-    color: white; } }
+    color: white; }
+  div.espaciado {
+    margin: 100px 100px 10px 100px;
+    height: 200px; }
+  a#volverAlInicio {
+    color: white;
+    font-size: 25px;
+    margin: 200px 50px 0px 50px; } }
 
 @media (min-width: 992px) {
   header div.unico {
@@ -231,29 +276,23 @@ footer div {
     width: 35px;
     height: 35px;
     margin: 10px 0px 0px 0px; }
+  img.div-centrar {
+    margin: 0px 0px 0px 90px; }
   body h1 {
     padding: 20px 0px 0px 0px; }
   img.small {
     width: 450px;
     height: 450px; }
+  div.espacio {
+    margin: 30px 270px 0px 270px; }
   section div.noticias {
     margin: 100px 100px 70px 100px;
     border: black; }
     section div.noticias div {
-      padding: 0px; }
+      padding: 0px 0px 0px 0px; }
   body article p.parrafoNoticias {
     font-size: 30px;
     padding: 150px 30px 0px 50px; }
-  section div.productos {
-    margin: 50px 100px 20px 100px;
-    border: white; }
-    section div.productos div {
-      padding: 0px; }
-  body article p {
-    font-size: 30px;
-    padding: 70px 20px 0px 30px; }
-  div.espacio {
-    margin: 2% 20% 0px 20%; }
   input {
     margin: 0px 20px 0px 0px;
     height: 60px; }
@@ -268,24 +307,40 @@ footer div {
   footer div {
     padding: 6px 0px 2px 0px;
     grid-column-gap: 10%; }
-  img.div-centrar {
-    margin: 0px 0px 0px 90px; }
   div.card-espacio {
     margin: 0% 10% 0% 10%; }
-  div.espaciado {
-    margin: 250px 300px 400px 300px;
-    height: 200px; }
+  section div.productos {
+    margin: 50px 100px 20px 200px;
+    border: white; }
+    section div.productos div {
+      padding: 0px 0px 0px 0px; }
   section.enProductos {
     margin: 100px 5px 30px 300px; }
   button.agregarCarrito {
-    width: 400px;
+    width: 330px;
     height: 20px; }
   body section div.card-body {
-    padding: 100px 0px 0px 0px; }
+    padding: 120px 0px 0px 0px; }
   body section p.agregado {
     padding: 20px 0px 0px 0px;
     font-weight: bold;
     color: #035503; }
+  img.imagenProductoSolo {
+    width: 900px;
+    height: 900px;
+    margin: 20px 0px 0px 0px; }
+  div.agregarProductoSolo {
+    margin: 20px 0px 0px 750px; }
+  table {
+    font-size: 20px; }
+  p.agregadoProductoSolo {
+    padding: 10px 0px 0px 10px;
+    font-weight: bold;
+    color: #035503;
+    font-size: 20px; }
+  div.espaciado {
+    margin: 100px 300px 400px 300px;
+    height: 200px; }
   button.botonesCarrito {
     width: 24px;
     height: 24px;
@@ -296,4 +351,16 @@ footer div {
   td button.restar {
     margin: 0px 0px 0px 5px; }
   td p.pCarrito {
-    font-size: 16px; } }
+    font-size: 16px; }
+  button#botonVaciar {
+    width: 300px;
+    height: 50px;
+    font-size: 20px; }
+  button#botonComprar {
+    width: 300px;
+    height: 50px;
+    font-size: 20px; }
+  a#volverAlInicio {
+    color: white;
+    font-size: 27px;
+    margin: 200px 400px 0px 400px; } }
